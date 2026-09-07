@@ -1,0 +1,86 @@
+name: Deploy web game to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download Godot 4.7.1
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 --output "$RUNNER_TEMP/godot.zip" https://github.com/godotengine/godot-builds/releases/download/4.7.1-stable/Godot_v4.7.1-stable_linux.x86_64.zip
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.7.1-stable_linux.x86_64"
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+      - name: Download and verify web export templates
+        run: |
+          cp WebVersion/toolchain/SOURCE.json "$RUNNER_TEMP/template-source.json"
+          python WebVersion/tools/fetch_web_templates.py
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          source = json.loads((Path(os.environ['RUNNER_TEMP']) / 'template-source.json').read_text())
+          for template in source['templates']:
+              data = (Path('WebVersion/toolchain') / template['file']).read_bytes()
+              if hashlib.sha256(data).hexdigest() != template['sha256']:
+                  raise SystemExit('Template checksum mismatch: ' + template['file'])
+          PY
+      - name: Import and export web project
+        shell: bash
+        run: |
+          mkdir -p WebVersion/reports
+          Godot_v4.7.1-stable_linux.x86_64 --headless --editor --import --path WebVersion/project 2>&1 | tee WebVersion/reports/import-ci.log
+          Godot_v4.7.1-stable_linux.x86_64 --headless --path WebVersion/project --export-release Web ../site/game.html 2>&1 | tee WebVersion/reports/export-ci.log
+          if grep -E 'SCRIPT ERROR|Parse Error|Failed to export' WebVersion/reports/*-ci.log; then
+            exit 1
+          fi
+          python WebVersion/tools/finalize_site.py
+          touch WebVersion/site/.nojekyll
+      - name: Verify deployment files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          site = Path('WebVersion/site')
+          for name in ['index.html', 'shell.js', 'shell.css', 'game.js', 'game.wasm', 'game.pck', 'build-config.js', 'ASSET_LICENSES.md', 'LICENSE', 'NOTO_OFL.txt']:
+              if not (site / name).is_file() or (site / name).stat().st_size == 0:
+                  raise SystemExit('Missing deployment file: ' + name)
+          config = json.loads((site / 'build-config.js').read_text().split(' = ', 1)[1].rstrip(';\n'))
+          for name, size in config['fileSizes'].items():
+              if (site / name).stat().st_size != size:
+                  raise SystemExit('Incorrect payload size: ' + name)
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: WebVersion/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

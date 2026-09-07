@@ -20,7 +20,7 @@ WASD 移动，鼠标观察，Shift 冲刺，Ctrl 蹲伏，E 调查，F 手电，
 
 ## 部署网站
 
-将 `site` 的全部内容放到静态服务器目录，入口为 `index.html`。也可以解压 `RAINROT_Web_Deploy.zip` 后直接上传包内文件。部署包为避免重复体积省略 `.gz` 副本，托管服务可以自行启用压缩。适合普通 HTTPS 静态托管，无后端、账户或远程存档依赖。这里没有代你发布到公共网站。
+将 `site` 的全部内容放到静态服务器目录，入口为 `index.html`。也可以解压 `RAINROT_Web_Deploy.zip` 后直接上传包内文件。部署包为避免重复体积省略 `.gz` 副本，托管服务可以自行启用压缩。适合普通 HTTPS 静态托管，无后端、账户或远程存档依赖。本项目已配置 GitHub Pages 自动部署：推送到 `main` 后，Actions 构建并发布到 https://semibluff888.github.io/rainrot/ 。构建进度见仓库 Actions；网页版内容来自 `WebVersion/project`，桌面版修改需要同步移植。
 
 - `.wasm` 的 Content-Type 应为 `application/wasm`，`.pck` 为 `application/octet-stream`，JS 为 JavaScript。
 - `.gz` 是可选预压缩副本。服务器选用它时必须发送正确的 `Content-Encoding: gzip` 和原始 MIME。不会配置时直接使用未压缩原文件，仍可运行。Nginx 可使用 `gzip_static on;`。

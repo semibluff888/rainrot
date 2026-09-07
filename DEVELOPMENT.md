@@ -15,8 +15,14 @@ powershell -ExecutionPolicy Bypass -File WebVersion/Build_Web.ps1
 
 远程仓库：https://github.com/semibluff888/rainrot ，默认分支为 `main`。
 
-## 后续网页部署
+## 网页自动部署
 
-先按上述步骤生成网页，再将 `WebVersion/site` 作为网站发布目录。仓库中的 `site` 仅保存网页入口与自定义样式，不包含生成的 WASM、PCK 和引擎脚本；不能把未构建的源码目录直接发布为可玩网站。
+公网地址：https://semibluff888.github.io/rainrot/
 
-推荐使用 HTTPS 静态托管，并为 `.wasm` 设置 `application/wasm`。此版本不依赖后端或跨源隔离。单个游戏资源文件约 38 MiB，选择托管平台时需确认其单文件限制。GitHub 仓库本身不等于已开启网站托管；本次只推送源码，不自动发布网站。
+推送到 `main` 后，GitHub Actions 的 `Deploy web game to GitHub Pages` 工作流会下载固定版本的 Godot 4.7.1 和经过 SHA-256 校验的网页模板，导入并导出 `WebVersion/project`，生成完整网站，再部署到 GitHub Pages。构建失败时保留上一次成功部署的网站。
+
+进度与错误日志：https://github.com/semibluff888/rainrot/actions/workflows/deploy-pages.yml 。也可以在该页面选择 `Run workflow` 手动重新发布。仓库 Settings → Pages 的 Source 使用 `GitHub Actions`。
+
+网页版是独立工程。游戏内容更新请修改 `WebVersion/project`；网页外壳修改 `WebVersion/site`。仅修改根目录桌面版不会自动移植到网页版。修改后提交并推送到 `main` 即可，无需提交 `.godot`、WASM、PCK 或 ZIP，也无需本机启动服务器。
+
+首次构建和发布需要等待 Actions 完成；访问后如仍显示旧内容，可以强制刷新。网页版存档属于当前浏览器和网址，首次从 localhost 改为公网地址时，请使用网页上的备份、导入功能转移存档。
