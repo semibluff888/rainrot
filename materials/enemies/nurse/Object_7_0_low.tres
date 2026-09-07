@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/models/enemies/nurse/textures/low/image_00.png" id="1_8i681"]
+[ext_resource type="Texture2D" path="res://assets/models/enemies/nurse/textures/low/image_01.png" id="2_ntkk8"]
+[ext_resource type="Texture2D" path="res://assets/models/enemies/nurse/textures/low/image_02.png" id="3_vpycv"]
+
+[resource]
+resource_name = "Body_low.002"
+cull_mode = 2
+albedo_color = Color(0.83, 0.87, 0.85, 1)
+albedo_texture = ExtResource("1_8i681")
+metallic = 0.02
+metallic_texture = ExtResource("2_ntkk8")
+metallic_texture_channel = 2
+roughness = 0.83
+roughness_texture = ExtResource("2_ntkk8")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_vpycv")
+texture_filter = 5
+metadata/_gltf_primary_texture_coord = 0

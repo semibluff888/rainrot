@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/textures/damaged_plaster/diff.jpg" id="1_dffme"]
+[ext_resource type="Texture2D" path="res://assets/textures/damaged_plaster/normal.jpg" id="2_k146v"]
+[ext_resource type="Texture2D" path="res://assets/textures/damaged_plaster/rough.jpg" id="3_exlb3"]
+
+[resource]
+albedo_color = Color(0.48, 0.49, 0.39, 1)
+albedo_texture = ExtResource("1_dffme")
+roughness_texture = ExtResource("3_exlb3")
+normal_enabled = true
+normal_scale = 0.7
+normal_texture = ExtResource("2_k146v")
+uv1_scale = Vector3(2, 2, 2)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 5

@@ -1,0 +1,20 @@
+[
+  {
+    "file": "game.wasm",
+    "bytes": 39513091,
+    "gzip_bytes": 10079166,
+    "sha256": "35116f68540ac41acf7d71ea457added91b5e960a9cca3e2acc72918eaf01277"
+  },
+  {
+    "file": "game.pck",
+    "bytes": 39722184,
+    "gzip_bytes": 33665649,
+    "sha256": "6a323475f2c073e4a59dec73b7e639f301c76b6d28e7f5a0cf05b5dbb2b5b385"
+  },
+  {
+    "file": "game.js",
+    "bytes": 279815,
+    "gzip_bytes": 68547,
+    "sha256": "68586d6daafc93c6e697b3fb258976874aa7459b8931165ebb1dc3c9614cc42c"
+  }
+]

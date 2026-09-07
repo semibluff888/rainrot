@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071416"><meta name="description" content="雨夜疗养院里的第一人称恐怖解谜故事。雨蚀：第九病区，浏览器可玩章节。">
+<title>雨蚀：第九病区 · 浏览器版</title>
+<link rel="icon" href="game.icon.png"><link rel="stylesheet" href="shell.css">
+</head>
+<body>
+<main id="stage">
+ <canvas id="canvas" tabindex="0" aria-label="雨蚀游戏画面">你的浏览器需要支持 WebGL 2。</canvas>
+ <section id="entry" class="veil">
+  <div class="weather">09.17 / 23:58<br>圣维罗妮卡疗养院<br><span>持续降雨 · 外界失联</span></div>
+  <div class="intro"><p class="eyebrow">A SURVIVAL HORROR STORY</p><div class="rule"></div>
+   <h1>雨 蚀</h1><p class="subtitle">第 九 病 区</p><p class="roman">R A I N R O T / W A R D 0 9</p>
+   <p class="prologue">雨一直没有停。<br>而那些病人，也从未离开。</p>
+   <button id="start" class="primary">进入雨夜 <span>→</span></button>
+   <p id="loading" role="status">完整章节 · 建议佩戴耳机，使用键盘与鼠标</p>
+   <progress id="progress" max="100" value="0" hidden></progress>
+  </div><span class="chapter">第一章 / 最后一份病历</span>
+ </section>
+ <button id="recapture" hidden>点击画面继续观察 <span>Esc 可释放鼠标</span></button>
+ <aside id="toolbar" hidden aria-label="网页工具">
+  <span class="wordmark">WARD 09 <i>WEB EDITION</i></span>
+  <button id="help">操作</button><button id="backup">备份记录</button><button id="restore">导入记录</button><button id="fullscreen">全屏</button>
+ </aside>
+ <p id="storage" hidden>此浏览器无法持久保存记录，请使用「备份记录」。</p>
+ <dialog id="manual"><button id="close-help" aria-label="关闭说明">×</button><p class="eyebrow">FIELD MANUAL</p><h2>进入之前</h2>
+  <p>WASD 移动 · 鼠标观察 · Shift 冲刺 · Ctrl 蹲伏<br>E 调查 · F 手电 · 左键射击 · 右键瞄准 · R 换弹<br>Tab 背包 · J 日志与提示 · Esc 暂停</p>
+  <p>点击游戏画面锁定鼠标。切换窗口或释放鼠标时，游戏会暂停。值班室与章节节点记录进度。</p>
+  <p>记录保存在当前浏览器和当前网址下。换浏览器或清理网站数据前，请备份记录。导入后在游戏中选择「继续调查」或「从最近记录继续」。</p>
+  <p>支持桌面 Chrome、Edge 和 Firefox 的 WebGL 2 模式。性能不足时，在游戏「视听设置」中降低画质。暂不提供触屏操作。</p>
+  <a href="credits.html" target="_blank" rel="noopener">制作与素材署名 ↗</a>
+ </dialog>
+ <dialog id="import-dialog"><button id="close-import" aria-label="关闭导入">×</button><p class="eyebrow">RESTORE RECORD</p><h2>恢复调查记录</h2><p>选择以前备份的 JSON 文件，也可以直接粘贴记录内容。导入会替换网页版的最近记录。</p><button id="choose-save">选择记录文件</button><textarea id="save-text" aria-label="记录 JSON 内容" placeholder="在此粘贴 JSON 记录" spellcheck="false"></textarea><button id="apply-save" class="primary">导入这份记录 →</button></dialog>
+ <input id="save-file" type="file" accept="application/json,.json" hidden>
+ <details id="qa" hidden open><summary>浏览器验证</summary><output id="telemetry"></output><pre id="qa-log"></pre><pre id="qa-report"></pre></details>
+</main>
+<script src="build-config.js"></script><script src="game.js"></script><script src="shell.js"></script>
+</body></html>

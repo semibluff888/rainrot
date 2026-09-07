@@ -1,0 +1,17 @@
+{
+  "engine": "4.7.1.stable",
+  "source": "https://github.com/godotengine/godot-builds/releases/download/4.7.1-stable/Godot_v4.7.1-stable_export_templates.tpz",
+  "templates": [
+    {
+      "file": "web_nothreads_debug.zip",
+      "size": 10231638,
+      "sha256": "eb6ca0ca168c405e73b20a4439d6dc048d74ae65eb31cc7675b6bc3cf7ad1815"
+    },
+    {
+      "file": "web_nothreads_release.zip",
+      "size": 10246274,
+      "sha256": "b7b7d7da29fc6cc2f4934fdd26cc571a40e7af57f716ea3eb7e18da720dae28a"
+    }
+  ],
+  "downloaded_bytes": 20567697
+}

@@ -1,0 +1,121 @@
+{
+  "id": "nurse",
+  "title": "Horror Mutant Bloody Nurse Gore (RIGGED)",
+  "author": "KrimzonHaze",
+  "source": "https://sketchfab.com/3d-models/horror-mutant-bloody-nurse-gore-rigged-2bc6e1cac98e458a824691009ef2433c",
+  "download": "Official Sketchfab 2K GLB, downloaded through signed-in website",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "date": "2026-09-07",
+  "sha256_source_glb": "7a2c7f1b7c471ef8809d46cdff8498c344310cb91689e46d4eb72af03f684ff1",
+  "sha256_source_archive": "ff8b18b047a45804851cf18e22cd8829ad5f71daba35f45a870461c8de398ff1",
+  "changes": "Original geometry and UVs preserved. External glTF textures; 2K/1K tiers; base-color saturation 86%; Godot PBR roughness/metallic/alpha-scissor tuning; floor pivot and facing normalization; editable in-place skeletal animation clips; bone hitboxes. Added twelve joints and blended weights for six lower appendages; attached original needle meshes to the matching hand bones; separate elite stance and timing.",
+  "skins": 1,
+  "animations": [],
+  "images": [
+    {
+      "image": 0,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": true
+    },
+    {
+      "image": 1,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": false
+    },
+    {
+      "image": 2,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": false
+    },
+    {
+      "image": 3,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": true
+    },
+    {
+      "image": 4,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": false
+    },
+    {
+      "image": 5,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": false
+    },
+    {
+      "image": 6,
+      "original_size": [
+        1024,
+        1024
+      ],
+      "base_color": true
+    },
+    {
+      "image": 7,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": true
+    },
+    {
+      "image": 8,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": false
+    },
+    {
+      "image": 9,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": false
+    },
+    {
+      "image": 10,
+      "original_size": [
+        2048,
+        256
+      ],
+      "base_color": true
+    },
+    {
+      "image": 11,
+      "original_size": [
+        2048,
+        256
+      ],
+      "base_color": false
+    },
+    {
+      "image": 12,
+      "original_size": [
+        2048,
+        256
+      ],
+      "base_color": false
+    }
+  ]
+}

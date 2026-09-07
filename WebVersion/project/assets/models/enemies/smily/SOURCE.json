@@ -1,0 +1,43 @@
+{
+  "id": "smily",
+  "title": "Smily horror monster",
+  "author": "Bento",
+  "source": "https://sketchfab.com/3d-models/smily-horror-monster-3d3fc31eddaa409a8f2df564823154e1",
+  "download": "Official Sketchfab 2K GLB, downloaded through signed-in website",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "date": "2026-09-07",
+  "sha256_source_glb": "85c2969d61e1c0bcad4934be43a070be4d80384d6924455f509e11584def0529",
+  "sha256_source_archive": "72dd54d03180f63b3bba0ae931fe9c16f87846feea8433e781ba962dfa8050d0",
+  "changes": "Original geometry and UVs preserved. External glTF textures; 2K/1K tiers; base-color saturation 86%; Godot PBR roughness/metallic/alpha-scissor tuning; floor pivot and facing normalization; editable in-place skeletal animation clips; bone hitboxes. Preserved source ArmatureAction in glTF; created game idle, alert, dragging walk, burst, attack, stun and death clips; static containment specimen.",
+  "skins": 1,
+  "animations": [
+    "Armature|ArmatureAction"
+  ],
+  "images": [
+    {
+      "image": 0,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": true
+    },
+    {
+      "image": 1,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": false
+    },
+    {
+      "image": 2,
+      "original_size": [
+        2048,
+        2048
+      ],
+      "base_color": false
+    }
+  ]
+}

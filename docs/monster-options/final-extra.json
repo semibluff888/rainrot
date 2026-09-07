@@ -1,0 +1,116 @@
+[
+  {
+    "uid": "06d2b90a1e24471283f6aaac748db1c9",
+    "name": "Creature [Rigged]",
+    "author": "Fridge",
+    "url": "https://sketchfab.com/3d-models/creature-rigged-06d2b90a1e24471283f6aaac748db1c9",
+    "license": {
+      "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+      "label": "CC Attribution",
+      "fullName": "Creative Commons Attribution",
+      "requirements": "Author must be credited. Commercial use is allowed.",
+      "url": "http://creativecommons.org/licenses/by/4.0/",
+      "slug": "by"
+    },
+    "animationCount": 0,
+    "faces": 24008,
+    "isDownloadable": true,
+    "description": "Scary creature modeled and rigged in Blender, textured in Substance Painter\n\nTextures include: Base Color (2k), Roughness (2k), Normal (2k)\n\nEnjoy!",
+    "thumbnails": {
+      "images": [
+        {
+          "uid": "45a1dd93a63747eaa2d4bb7918272fca",
+          "width": 1920,
+          "height": 1080,
+          "size": 207929,
+          "url": "https://media.sketchfab.com/models/06d2b90a1e24471283f6aaac748db1c9/thumbnails/127bf494531c45e6b02ef1f19e3e945f/c744d9ebfa6c464ea1ba63d069c05e89.jpeg"
+        },
+        {
+          "uid": "30eb131ebdbe46099888e50c6b287674",
+          "width": 1024,
+          "height": 576,
+          "size": 36560,
+          "url": "https://media.sketchfab.com/models/06d2b90a1e24471283f6aaac748db1c9/thumbnails/127bf494531c45e6b02ef1f19e3e945f/3e15b911aac74a088315880dc2a29662.jpeg"
+        },
+        {
+          "uid": "74a302d40966489183d9ebd916d21818",
+          "width": 720,
+          "height": 405,
+          "size": 20618,
+          "url": "https://media.sketchfab.com/models/06d2b90a1e24471283f6aaac748db1c9/thumbnails/127bf494531c45e6b02ef1f19e3e945f/e48d495d366c4e0d9b6f3cf896bcb8b6.jpeg"
+        },
+        {
+          "uid": "9b0ae503aba945fe8bcc6140db208725",
+          "width": 256,
+          "height": 144,
+          "size": 4599,
+          "url": "https://media.sketchfab.com/models/06d2b90a1e24471283f6aaac748db1c9/thumbnails/127bf494531c45e6b02ef1f19e3e945f/f1135411aa664a90952754254d20c8f3.jpeg"
+        },
+        {
+          "uid": "6e402a8229234b4ebf015beec3ea59ff",
+          "width": 64,
+          "height": 36,
+          "size": 1121,
+          "url": "https://media.sketchfab.com/models/06d2b90a1e24471283f6aaac748db1c9/thumbnails/127bf494531c45e6b02ef1f19e3e945f/b90638b357af44b6977f3ff2c5a42a8b.jpeg"
+        }
+      ]
+    }
+  },
+  {
+    "uid": "417f6ff2d90043a7ab061d560801be93",
+    "name": "Grimhound Rig",
+    "author": "DM-913",
+    "url": "https://sketchfab.com/3d-models/grimhound-rig-417f6ff2d90043a7ab061d560801be93",
+    "license": {
+      "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+      "label": "CC Attribution",
+      "fullName": "Creative Commons Attribution",
+      "requirements": "Author must be credited. Commercial use is allowed.",
+      "url": "http://creativecommons.org/licenses/by/4.0/",
+      "slug": "by"
+    },
+    "animationCount": 1,
+    "faces": 22136,
+    "isDownloadable": true,
+    "description": "A brief project I had in mind but not too ambitous. What I had in mind was pretty straight forward and resulted as so. A voracious univiting creature of dread, houndlike homunculus yet not too houndlike but of a unpromising inception.\n\nFeel free to donate sometime if you like this model >  https://ko-fi.com/dm913",
+    "thumbnails": {
+      "images": [
+        {
+          "uid": "352927f766f94472b679828657a5fbfa",
+          "width": 1920,
+          "height": 1080,
+          "size": 184776,
+          "url": "https://media.sketchfab.com/models/417f6ff2d90043a7ab061d560801be93/thumbnails/e4453f1581094f7d9d0612029856e702/73528d33be9e4fab9e8e0996d8fcb6e1.jpeg"
+        },
+        {
+          "uid": "265695c325c743a0bab631acd3028dff",
+          "width": 1024,
+          "height": 576,
+          "size": 54130,
+          "url": "https://media.sketchfab.com/models/417f6ff2d90043a7ab061d560801be93/thumbnails/e4453f1581094f7d9d0612029856e702/95ec29e8bdd2419f92658bb58167aefc.jpeg"
+        },
+        {
+          "uid": "1a472ca3a52845d4bf6c59077a59a94b",
+          "width": 720,
+          "height": 405,
+          "size": 29561,
+          "url": "https://media.sketchfab.com/models/417f6ff2d90043a7ab061d560801be93/thumbnails/e4453f1581094f7d9d0612029856e702/7a38a99ccdc642588d35bfe34d549e6b.jpeg"
+        },
+        {
+          "uid": "7bf65058b0c541808c29bae34dafc84a",
+          "width": 256,
+          "height": 144,
+          "size": 5465,
+          "url": "https://media.sketchfab.com/models/417f6ff2d90043a7ab061d560801be93/thumbnails/e4453f1581094f7d9d0612029856e702/7900905f07064e9ca7527501b6bfbb22.jpeg"
+        },
+        {
+          "uid": "6d3667f3f611481bbcdc4e53af6b5733",
+          "width": 64,
+          "height": 36,
+          "size": 1158,
+          "url": "https://media.sketchfab.com/models/417f6ff2d90043a7ab061d560801be93/thumbnails/e4453f1581094f7d9d0612029856e702/d2e383a8c004438fb535712e8cf772a4.jpeg"
+        }
+      ]
+    }
+  }
+]

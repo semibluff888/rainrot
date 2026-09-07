@@ -1,0 +1,24 @@
+.godot/
+*.tmp
+logs/
+captures/
+__pycache__/
+.runtime/
+
+# Generated deliveries and web engine/export artifacts (keep editable sources).
+/delivery/
+/WebVersion/*.zip
+/WebVersion/toolchain/*
+!/WebVersion/toolchain/SOURCE.json
+/WebVersion/site/game.*
+/WebVersion/site/build-config.js
+/WebVersion/reports/*output*.txt
+*.log
+*.pid
+
+# Local environment and credentials.
+.env
+.env.*
+!.env.example
+*.pem
+*.key

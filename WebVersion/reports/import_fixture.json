@@ -1,0 +1,1 @@
+{"version": 1, "stage": 0, "health": 73, "magazine": 6, "inventory": [{"kind": "ammo", "amount": 6}, {"kind": "med", "amount": 1}], "keys": [], "notes": [], "collected": [], "dead_enemies": [], "doors": {}, "breakers": [false, false, false, false], "specimens": ["09", "09", "09"], "seconds": 12, "shots": 0, "position": [0, 0.1, 10.5], "yaw": 0}

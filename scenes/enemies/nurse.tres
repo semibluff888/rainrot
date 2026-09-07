@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="WardEnemyProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+role_id = &"nurse"
+display_name = "多肢护士"
+visual_scene_path = "res://scenes/enemies/nurse_visual.tscn"
+max_health = 140
+body_radius = 0.35
+body_height = 1.95
+patrol_speed = 0.65
+chase_speed = 1.75
+alert_duration = 1.2
+attack_range = 1.55
+damage_range = 1.75
+attack_damage = 28
+windup = 0.75
+strike_duration = 0.18
+recovery = 0.85
+attack_cooldown = 0.65
+stagger_duration = 0.9
+burst_speed = 0.0
+breath_sound = "nurse_breath"
+step_sound = "nurse_step"
+alert_sound = "nurse_joint"
+strike_sound = "nurse_stab"

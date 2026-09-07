@@ -1,0 +1,618 @@
+{
+  "kind": "walkthrough",
+  "active_play_seconds": 92.7333333333294,
+  "enemies_enabled": true,
+  "events": [
+    {
+      "event": "note_arrival",
+      "health": 100,
+      "position": [
+        0,
+        0.000214837491512299,
+        10.5
+      ],
+      "seconds": 0.216666666666667
+    },
+    {
+      "event": "safe_door",
+      "health": 100,
+      "position": [
+        0,
+        0.000824686198029667,
+        5.08333444595337
+      ],
+      "seconds": 3.43333333333333
+    },
+    {
+      "event": "note_rounds",
+      "health": 100,
+      "position": [
+        -8.23319530487061,
+        -0.000185526907444,
+        4.44092559814453
+      ],
+      "seconds": 7.13333333333331
+    },
+    {
+      "event": "save_recorder",
+      "health": 100,
+      "position": [
+        -7.19204616546631,
+        0.000833636207971722,
+        4.40768432617188
+      ],
+      "seconds": 7.79999999999998
+    },
+    {
+      "event": "note_last_shift",
+      "health": 100,
+      "position": [
+        -7.02096700668335,
+        0.000838177278637886,
+        6.31676816940308
+      ],
+      "seconds": 8.78333333333335
+    },
+    {
+      "event": "power_door",
+      "health": 100,
+      "position": [
+        -0.00128197239246219,
+        0.000838015927001834,
+        -5.91308212280273
+      ],
+      "seconds": 17.4333333333336
+    },
+    {
+      "event": "note_power",
+      "health": 100,
+      "position": [
+        -6.10451507568359,
+        0.000829020340461284,
+        -7.10544395446777
+      ],
+      "seconds": 20.4333333333335
+    },
+    {
+      "event": "power_panel",
+      "health": 100,
+      "position": [
+        -8.10302066802979,
+        0.000828291813377291,
+        -5.09708595275879
+      ],
+      "seconds": 21.7833333333334
+    },
+    {
+      "event": "ward_door",
+      "health": 76,
+      "position": [
+        -0.00160465016961098,
+        0.000829115859232843,
+        -19.9131641387939
+      ],
+      "seconds": 32.0166666666661
+    },
+    {
+      "event": "note_ward",
+      "health": 76,
+      "position": [
+        -5.16525077819824,
+        -0.000303843815345317,
+        -16.0855655670166
+      ],
+      "seconds": 36.1833333333326
+    },
+    {
+      "event": "pharmacy_west",
+      "health": 52,
+      "position": [
+        -0.000685771461576223,
+        0.000829057127702981,
+        -1.08373069763184
+      ],
+      "seconds": 48.9666666666652
+    },
+    {
+      "event": "medicine_lock",
+      "health": 52,
+      "position": [
+        7.9026927947998,
+        0.000838163832668215,
+        -4.45730686187744
+      ],
+      "seconds": 53.8333333333316
+    },
+    {
+      "event": "pharmacy_east",
+      "health": 28,
+      "position": [
+        12.938572883606,
+        0.000833627302199602,
+        -1.09881091117859
+      ],
+      "seconds": 58.1166666666646
+    },
+    {
+      "event": "cold_door",
+      "health": 83,
+      "position": [
+        0.00756502989679575,
+        0.000824611575808376,
+        -33.9141540527344
+      ],
+      "seconds": 81.5666666666633
+    },
+    {
+      "event": "note_autopsy",
+      "health": 83,
+      "position": [
+        -8.60781669616699,
+        0.000829201948363334,
+        -32.4920043945312
+      ],
+      "seconds": 86.0333333333297
+    },
+    {
+      "event": "specimen_terminal",
+      "health": 83,
+      "position": [
+        -9.92918014526367,
+        0.000833623053040355,
+        -32.6708450317383
+      ],
+      "seconds": 86.7833333333297
+    }
+  ],
+  "health": 0,
+  "no_teleports": true,
+  "passed": false,
+  "shots": 0,
+  "browser_frames": [
+    {
+      "fps": 20,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 120,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 120,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 127,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 24,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 56,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 72,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 56,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 82,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 75,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 63,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 63,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 65,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 69,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 104,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 104,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 111,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 111,
+      "stage": 0,
+      "quality": 1
+    },
+    {
+      "fps": 60,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 55,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 59,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 65,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 67,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 63,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 68,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 68,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 80,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 93,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 93,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 110,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 81,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 81,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 67,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 78,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 91,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 91,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 84,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 69,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 57,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 59,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 60,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 68,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 76,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 76,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 81,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 70,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 72,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 78,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 57,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 57,
+      "stage": 1,
+      "quality": 1
+    },
+    {
+      "fps": 92,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 79,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 38,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 74,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 74,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 113,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 113,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 104,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 66,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 77,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 78,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 78,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 82,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 95,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 95,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 104,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 104,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 124,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 89,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 89,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 63,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 61,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 80,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 92,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 92,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 95,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 86,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 22,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 56,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 56,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 32,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 32,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 99,
+      "stage": 2,
+      "quality": 1
+    },
+    {
+      "fps": 78,
+      "stage": 3,
+      "quality": 1
+    },
+    {
+      "fps": 41,
+      "stage": 3,
+      "quality": 1
+    },
+    {
+      "fps": 64,
+      "stage": 3,
+      "quality": 1
+    },
+    {
+      "fps": 70,
+      "stage": 3,
+      "quality": 1
+    },
+    {
+      "fps": 64,
+      "stage": 3,
+      "quality": 1
+    },
+    {
+      "fps": 63,
+      "stage": 3,
+      "quality": 1
+    }
+  ]
+}

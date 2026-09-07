@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="WardEnemyProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+role_id = &"nurse"
+display_name = "第九病区护士长"
+visual_scene_path = "res://scenes/enemies/nurse_elite_visual.tscn"
+body_radius = 0.35
+body_height = 2.1
+patrol_speed = 0.7
+chase_speed = 3.6
+alert_duration = 1.2
+attack_range = 1.4
+damage_range = 1.68
+attack_damage = 32
+windup = 0.7
+strike_duration = 0.17
+recovery = 0.7
+attack_cooldown = 0.5
+stagger_duration = 1.1
+burst_speed = 0.0
+breath_sound = "nurse_breath"
+step_sound = "nurse_step"
+alert_sound = "nurse_joint"
+strike_sound = "nurse_stab"
+voice_pitch = 0.78

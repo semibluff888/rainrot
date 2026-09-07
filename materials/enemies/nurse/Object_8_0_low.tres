@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/models/enemies/nurse/textures/low/image_03.png" id="1_5ofcy"]
+[ext_resource type="Texture2D" path="res://assets/models/enemies/nurse/textures/low/image_04.png" id="2_ak25k"]
+[ext_resource type="Texture2D" path="res://assets/models/enemies/nurse/textures/low/image_05.png" id="3_x2hkj"]
+
+[resource]
+resource_name = "Hair_low.001"
+transparency = 2
+alpha_scissor_threshold = 0.4
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_color = Color(0.83, 0.87, 0.85, 1)
+albedo_texture = ExtResource("1_5ofcy")
+metallic = 0.02
+metallic_texture = ExtResource("2_ak25k")
+metallic_texture_channel = 2
+roughness = 0.72
+roughness_texture = ExtResource("2_ak25k")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_x2hkj")
+texture_filter = 5
+metadata/_gltf_primary_texture_coord = 0

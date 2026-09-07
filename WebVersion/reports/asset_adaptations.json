@@ -1,0 +1,343 @@
+[
+  {
+    "path": "assets/models/enemies/smily/textures/high/image_00.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/smily/textures/high/image_01.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/smily/textures/high/image_02.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/smily/textures/low/image_00.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/smily/textures/low/image_01.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/smily/textures/low/image_02.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_00.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_01.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_02.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_03.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_04.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_05.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_07.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_08.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_09.png",
+    "before": [
+      2048,
+      2048
+    ],
+    "after": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_10.png",
+    "before": [
+      2048,
+      256
+    ],
+    "after": [
+      1024,
+      128
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_11.png",
+    "before": [
+      2048,
+      256
+    ],
+    "after": [
+      1024,
+      128
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/high/image_12.png",
+    "before": [
+      2048,
+      256
+    ],
+    "after": [
+      1024,
+      128
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_00.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_01.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_02.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_03.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_04.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_05.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_06.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_07.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_08.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_09.png",
+    "before": [
+      1024,
+      1024
+    ],
+    "after": [
+      512,
+      512
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_10.png",
+    "before": [
+      1024,
+      128
+    ],
+    "after": [
+      512,
+      64
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_11.png",
+    "before": [
+      1024,
+      128
+    ],
+    "after": [
+      512,
+      64
+    ]
+  },
+  {
+    "path": "assets/models/enemies/nurse/textures/low/image_12.png",
+    "before": [
+      1024,
+      128
+    ],
+    "after": [
+      512,
+      64
+    ]
+  }
+]

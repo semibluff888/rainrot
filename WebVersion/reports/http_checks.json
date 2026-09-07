@@ -1,0 +1,65 @@
+[
+  {
+    "path": "index.html",
+    "status": 200,
+    "type": "text/html",
+    "encoding": null,
+    "length": "3632"
+  },
+  {
+    "path": "game.wasm",
+    "status": 200,
+    "type": "application/wasm",
+    "encoding": "gzip",
+    "length": "10079166"
+  },
+  {
+    "path": "game.pck",
+    "status": 200,
+    "type": "application/octet-stream",
+    "encoding": "gzip",
+    "length": "33665649"
+  },
+  {
+    "path": "game.js",
+    "status": 200,
+    "type": "application/javascript",
+    "encoding": "gzip",
+    "length": "68547"
+  },
+  {
+    "path": "game.audio.worklet.js",
+    "status": 200,
+    "type": "application/javascript",
+    "encoding": null,
+    "length": "7298"
+  },
+  {
+    "path": "game.audio.position.worklet.js",
+    "status": 200,
+    "type": "application/javascript",
+    "encoding": null,
+    "length": "2973"
+  },
+  {
+    "path": "credits.html",
+    "status": 200,
+    "type": "text/html",
+    "encoding": null,
+    "length": "1382"
+  },
+  {
+    "path": "ASSET_LICENSES.md",
+    "status": 200,
+    "type": "application/octet-stream",
+    "encoding": null,
+    "length": "5187"
+  },
+  {
+    "path": "NOTO_OFL.txt",
+    "status": 200,
+    "type": "text/plain",
+    "encoding": null,
+    "length": "4388"
+  }
+]

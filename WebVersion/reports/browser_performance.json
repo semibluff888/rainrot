@@ -1,0 +1,18 @@
+[
+  {
+    "run": "browser_walkthrough",
+    "samples": 126,
+    "median_fps": 65.5,
+    "min_fps": 6,
+    "max_fps": 126,
+    "note": "In-app Chromium DOM telemetry, variable viewport, fixed simulation step; not a controlled 1080p benchmark."
+  },
+  {
+    "run": "browser_pacifist",
+    "samples": 94,
+    "median_fps": 68.5,
+    "min_fps": 16,
+    "max_fps": 120,
+    "note": "In-app Chromium DOM telemetry, variable viewport, fixed simulation step; not a controlled 1080p benchmark."
+  }
+]

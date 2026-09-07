@@ -1,0 +1,569 @@
+{
+  "assets": [
+    {
+      "id": "brown_floor_tiles",
+      "source": "https://polyhaven.com/a/brown_floor_tiles",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\textures\\brown_floor_tiles\\diff.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brown_floor_tiles/brown_floor_tiles_diff_1k.jpg",
+          "md5": "6bff33d5ac96c8ef912210bfdfb8411f",
+          "size": 842317
+        },
+        {
+          "path": "assets\\textures\\brown_floor_tiles\\normal.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brown_floor_tiles/brown_floor_tiles_nor_gl_1k.jpg",
+          "md5": "403a06b6f114d7585710c290f47c155a",
+          "size": 410710
+        },
+        {
+          "path": "assets\\textures\\brown_floor_tiles\\rough.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brown_floor_tiles/brown_floor_tiles_rough_1k.jpg",
+          "md5": "24b7da9312c16212b87fcf8340548e2b",
+          "size": 658053
+        }
+      ]
+    },
+    {
+      "id": "concrete_floor_worn_001",
+      "source": "https://polyhaven.com/a/concrete_floor_worn_001",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\textures\\concrete_floor_worn_001\\diff.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_worn_001/concrete_floor_worn_001_diff_1k.jpg",
+          "size": 118806,
+          "md5": "e35597cca586150b1ab2aa9a331a39c5"
+        },
+        {
+          "path": "assets\\textures\\concrete_floor_worn_001\\normal.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_worn_001/concrete_floor_worn_001_nor_gl_1k.jpg",
+          "size": 110906,
+          "md5": "9de6626758f8793b71182b892c110827"
+        },
+        {
+          "path": "assets\\textures\\concrete_floor_worn_001\\rough.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete_floor_worn_001/concrete_floor_worn_001_rough_1k.jpg",
+          "size": 181942,
+          "md5": "b158eae73029ac6a849481274a0e1b35"
+        }
+      ]
+    },
+    {
+      "id": "blue_plaster_weathered",
+      "source": "https://polyhaven.com/a/blue_plaster_weathered",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\textures\\blue_plaster_weathered\\diff.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/blue_plaster_weathered/blue_plaster_weathered_diff_1k.jpg",
+          "md5": "ab6b96054e7d17f7b8be6703cc63b404",
+          "size": 710236
+        },
+        {
+          "path": "assets\\textures\\blue_plaster_weathered\\normal.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/blue_plaster_weathered/blue_plaster_weathered_nor_gl_1k.jpg",
+          "md5": "ff205e40651a0f72617bd554e498ba3b",
+          "size": 676587
+        },
+        {
+          "path": "assets\\textures\\blue_plaster_weathered\\rough.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/blue_plaster_weathered/blue_plaster_weathered_rough_1k.jpg",
+          "md5": "274bede903cf16d20752633169f6fcb3",
+          "size": 272132
+        }
+      ]
+    },
+    {
+      "id": "rusty_metal_sheet",
+      "source": "https://polyhaven.com/a/rusty_metal_sheet",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\textures\\rusty_metal_sheet\\diff.jpg",
+          "size": 793031,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rusty_metal_sheet/rusty_metal_sheet_diff_1k.jpg",
+          "md5": "ccbfebdd62b6d021d1b3f890ab0e5a6d"
+        },
+        {
+          "path": "assets\\textures\\rusty_metal_sheet\\normal.jpg",
+          "size": 409291,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rusty_metal_sheet/rusty_metal_sheet_nor_gl_1k.jpg",
+          "md5": "ace5dbc3f612ed8f46e70a0bef3c162e"
+        },
+        {
+          "path": "assets\\textures\\rusty_metal_sheet\\rough.jpg",
+          "size": 626838,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rusty_metal_sheet/rusty_metal_sheet_rough_1k.jpg",
+          "md5": "91bd71b5e125d6a1a0143ed84bb7acb6"
+        }
+      ]
+    },
+    {
+      "id": "dark_wood",
+      "source": "https://polyhaven.com/a/dark_wood",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\textures\\dark_wood\\diff.jpg",
+          "size": 754754,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dark_wood/dark_wood_diff_1k.jpg",
+          "md5": "47fa883f1bb33acc5711245f64b75975"
+        },
+        {
+          "path": "assets\\textures\\dark_wood\\normal.jpg",
+          "size": 344338,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dark_wood/dark_wood_nor_gl_1k.jpg",
+          "md5": "ca74ffa4c1b7ff5afe7316bbfa87f9a0"
+        },
+        {
+          "path": "assets\\textures\\dark_wood\\rough.jpg",
+          "size": 574415,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dark_wood/dark_wood_rough_1k.jpg",
+          "md5": "b1acb7bf90785d3945a85eca408dbc6c"
+        }
+      ]
+    },
+    {
+      "id": "damaged_plaster",
+      "source": "https://polyhaven.com/a/damaged_plaster",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\textures\\damaged_plaster\\diff.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/damaged_plaster/damaged_plaster_diff_1k.jpg",
+          "md5": "a8df39b93ebece3c1c84290e3e916ec1",
+          "size": 850524
+        },
+        {
+          "path": "assets\\textures\\damaged_plaster\\normal.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/damaged_plaster/damaged_plaster_nor_gl_1k.jpg",
+          "md5": "f51f2fb57309e9d1974b9841f9b605ea",
+          "size": 959148
+        },
+        {
+          "path": "assets\\textures\\damaged_plaster\\rough.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/damaged_plaster/damaged_plaster_rough_1k.jpg",
+          "md5": "bbdad97a6d7c74e24b58b6e398e8eb19",
+          "size": 421151
+        }
+      ]
+    },
+    {
+      "id": "wheelchair_01",
+      "source": "https://polyhaven.com/a/wheelchair_01",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\models\\wheelchair_01\\wheelchair_01.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wheelchair_01/wheelchair_01_1k.gltf",
+          "md5": "53901a369849ad929d030279a3d1f719"
+        },
+        {
+          "path": "assets\\models\\wheelchair_01\\textures\\wheelchair_01_diff_1k.jpg",
+          "size": 126137,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wheelchair_01/wheelchair_01_diff_1k.jpg",
+          "md5": "8f3f7ef28ebe675f20fefb8fbafb8ac3"
+        },
+        {
+          "path": "assets\\models\\wheelchair_01\\textures\\wheelchair_01_nor_gl_1k.jpg",
+          "size": 210295,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wheelchair_01/wheelchair_01_nor_gl_1k.jpg",
+          "md5": "256c08e1dcf3a937b7d66a845bd21f04"
+        },
+        {
+          "path": "assets\\models\\wheelchair_01\\wheelchair_01.bin",
+          "size": 1183752,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/wheelchair_01/wheelchair_01.bin",
+          "md5": "419414082dc40cae13c9141d8922a218"
+        },
+        {
+          "path": "assets\\models\\wheelchair_01\\textures\\wheelchair_01_arm_1k.jpg",
+          "size": 225508,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wheelchair_01/wheelchair_01_arm_1k.jpg",
+          "md5": "4c4d70458a7848b9d4f60d0b2ec84d2c"
+        }
+      ]
+    },
+    {
+      "id": "old_bed_frame",
+      "source": "https://polyhaven.com/a/old_bed_frame",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\models\\old_bed_frame\\old_bed_frame.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/old_bed_frame/old_bed_frame_1k.gltf",
+          "md5": "c89bd90f816adc4a0ef7af72d868be51"
+        },
+        {
+          "path": "assets\\models\\old_bed_frame\\textures\\old_bed_frame_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/old_bed_frame/old_bed_frame_nor_gl_1k.jpg",
+          "md5": "c202f1b179d7a418ccca622582734f67",
+          "size": 642790
+        },
+        {
+          "path": "assets\\models\\old_bed_frame\\textures\\old_bed_frame_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/old_bed_frame/old_bed_frame_diff_1k.jpg",
+          "md5": "f8ce1aa5413c1473f3bfa5ba95ea72ee",
+          "size": 699001
+        },
+        {
+          "path": "assets\\models\\old_bed_frame\\textures\\old_bed_frame_arm_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/old_bed_frame/old_bed_frame_arm_1k.jpg",
+          "md5": "7da561d54a3373144e1744e83c901181",
+          "size": 831931
+        },
+        {
+          "path": "assets\\models\\old_bed_frame\\old_bed_frame.bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/old_bed_frame/old_bed_frame.bin",
+          "md5": "f385c21ecbcb1da63cfe79cd22124c59",
+          "size": 1864580
+        }
+      ]
+    },
+    {
+      "id": "portable_cassette_player",
+      "source": "https://polyhaven.com/a/portable_cassette_player",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\models\\portable_cassette_player\\portable_cassette_player.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/portable_cassette_player/portable_cassette_player_1k.gltf",
+          "md5": "e609ba3e35c85984515c94fa22c58a61"
+        },
+        {
+          "path": "assets\\models\\portable_cassette_player\\textures\\portable_cassette_player_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/portable_cassette_player/portable_cassette_player_nor_gl_1k.jpg",
+          "md5": "48df539728df6b09fd4ef5117cce2e27",
+          "size": 497524
+        },
+        {
+          "path": "assets\\models\\portable_cassette_player\\textures\\portable_cassette_player_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/portable_cassette_player/portable_cassette_player_diff_1k.jpg",
+          "md5": "323349def54ee5749dc320a74fe65021",
+          "size": 612766
+        },
+        {
+          "path": "assets\\models\\portable_cassette_player\\textures\\portable_cassette_player_arm_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/portable_cassette_player/portable_cassette_player_arm_1k.jpg",
+          "md5": "35f36cda3bb1c57c4b92606982edb06e",
+          "size": 924333
+        },
+        {
+          "path": "assets\\models\\portable_cassette_player\\portable_cassette_player.bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/portable_cassette_player/portable_cassette_player.bin",
+          "md5": "7e74f60140745a98db2058cb0abe5ff9",
+          "size": 511012
+        }
+      ]
+    },
+    {
+      "id": "desk_lamp_arm_01",
+      "source": "https://polyhaven.com/a/desk_lamp_arm_01",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\models\\desk_lamp_arm_01\\desk_lamp_arm_01.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/desk_lamp_arm_01/desk_lamp_arm_01_1k.gltf",
+          "md5": "29b204485d30e66ee3f183ef45bf4bb3"
+        },
+        {
+          "path": "assets\\models\\desk_lamp_arm_01\\textures\\desk_lamp_arm_01_nor_gl_1k.jpg",
+          "size": 651826,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/desk_lamp_arm_01/desk_lamp_arm_01_nor_gl_1k.jpg",
+          "md5": "5aabbfe920ea6726d5299be7d6224551"
+        },
+        {
+          "path": "assets\\models\\desk_lamp_arm_01\\textures\\desk_lamp_arm_01_arm_1k.jpg",
+          "size": 780379,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/desk_lamp_arm_01/desk_lamp_arm_01_arm_1k.jpg",
+          "md5": "0b887af80f561216baa3da94d001d51a"
+        },
+        {
+          "path": "assets\\models\\desk_lamp_arm_01\\textures\\desk_lamp_arm_01_diff_1k.jpg",
+          "size": 702522,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/desk_lamp_arm_01/desk_lamp_arm_01_diff_1k.jpg",
+          "md5": "a5c1bf5465da39ca6ca9039dd4e3fd66"
+        },
+        {
+          "path": "assets\\models\\desk_lamp_arm_01\\desk_lamp_arm_01.bin",
+          "size": 736804,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/desk_lamp_arm_01/desk_lamp_arm_01.bin",
+          "md5": "29ffa5bb6bee35b066e46073124fee1a"
+        }
+      ]
+    },
+    {
+      "id": "portable_generator",
+      "source": "https://polyhaven.com/a/portable_generator",
+      "license": "CC0-1.0",
+      "files": [
+        {
+          "path": "assets\\models\\portable_generator\\portable_generator.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/portable_generator/portable_generator_1k.gltf",
+          "md5": "13c2380487daae6726443b9f38dd7e53"
+        },
+        {
+          "path": "assets\\models\\portable_generator\\textures\\portable_generator_spec_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/portable_generator/portable_generator_spec_1k.jpg",
+          "md5": "b3044dbc984897ed902bd47a450f742f",
+          "size": 23119
+        },
+        {
+          "path": "assets\\models\\portable_generator\\textures\\portable_generator_nor_gl_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/portable_generator/portable_generator_nor_gl_1k.jpg",
+          "md5": "89a51a982488c21eddec2c6e02249591",
+          "size": 818829
+        },
+        {
+          "path": "assets\\models\\portable_generator\\textures\\portable_generator_diff_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/portable_generator/portable_generator_diff_1k.jpg",
+          "md5": "3d572e1716148ca5d641d8a199fe9192",
+          "size": 755079
+        },
+        {
+          "path": "assets\\models\\portable_generator\\textures\\portable_generator_arm_1k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/portable_generator/portable_generator_arm_1k.jpg",
+          "md5": "7dbb8b9f0aa4e9d3ce6ad37e0326299f",
+          "size": 887711
+        },
+        {
+          "path": "assets\\models\\portable_generator\\portable_generator.bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/portable_generator/portable_generator.bin",
+          "md5": "81b2f4c4c6d0b0d7388ae9aa1123563a",
+          "size": 939572
+        }
+      ]
+    },
+    {
+      "id": "smily",
+      "title": "Smily horror monster",
+      "author": "Bento",
+      "source": "https://sketchfab.com/3d-models/smily-horror-monster-3d3fc31eddaa409a8f2df564823154e1",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "download_date": "2026-09-07",
+      "sha256_source_glb": "85c2969d61e1c0bcad4934be43a070be4d80384d6924455f509e11584def0529",
+      "sha256_source_archive": "72dd54d03180f63b3bba0ae931fe9c16f87846feea8433e781ba962dfa8050d0",
+      "changes": "Original geometry and UVs preserved. External glTF textures; 2K/1K tiers; base-color saturation 86%; Godot PBR roughness/metallic/alpha-scissor tuning; floor pivot and facing normalization; editable in-place skeletal animation clips; bone hitboxes. Preserved source ArmatureAction in glTF; created game idle, alert, dragging walk, burst, attack, stun and death clips; static containment specimen.",
+      "files": [
+        {
+          "path": "assets/models/enemies/smily/LICENSE.txt",
+          "sha256": "8194743b283b5aa01af1b3cbae41580e1af9f6e5e2eaed121e805721869770b8",
+          "size": 324
+        },
+        {
+          "path": "assets/models/enemies/smily/model.bin",
+          "sha256": "a220f8661cea808090b7dd57bb878de85688fe77309b45d83f7b31b14972ff61",
+          "size": 12902324
+        },
+        {
+          "path": "assets/models/enemies/smily/model.gltf",
+          "sha256": "c60f9add9ddd58ba58c0422d84bb29d35540b85b3ee673716407c07f5e34e2dc",
+          "size": 77182
+        },
+        {
+          "path": "assets/models/enemies/smily/SOURCE.json",
+          "sha256": "67caf36cb9dd01b3273054448b8b658e5819430d38261752cab7aaa5408d5b9d",
+          "size": 1451
+        },
+        {
+          "path": "assets/models/enemies/smily/textures/high/image_00.png",
+          "sha256": "c227c61145ff2d8802b34a456e09c72fedbdafd72f07e00d4257ebb08d6ec95e",
+          "size": 3250481
+        },
+        {
+          "path": "assets/models/enemies/smily/textures/high/image_01.png",
+          "sha256": "865a660af386d7ed835591291d53a84b799733fffa30503a503cba92d270ef48",
+          "size": 4079328
+        },
+        {
+          "path": "assets/models/enemies/smily/textures/high/image_02.png",
+          "sha256": "ae09c1ff82ba09eff539e506218a92cc7aa8bd907e2900effbc60824e16f90fe",
+          "size": 5535985
+        },
+        {
+          "path": "assets/models/enemies/smily/textures/low/image_00.png",
+          "sha256": "366892ea89367559f3e08288278a8a31d40585a49c92b59c722cf5cb515ca8f8",
+          "size": 941102
+        },
+        {
+          "path": "assets/models/enemies/smily/textures/low/image_01.png",
+          "sha256": "3a5c1b04e1bf16c61b9a8abf9e257fb7b9d258a63756f412fe9d574a127d4b90",
+          "size": 1081068
+        },
+        {
+          "path": "assets/models/enemies/smily/textures/low/image_02.png",
+          "sha256": "6360a7fb492f4f4906f9287c26fd919035e2ae8cdac6974b163bff0d2b264384",
+          "size": 1711257
+        }
+      ]
+    },
+    {
+      "id": "nurse",
+      "title": "Horror Mutant Bloody Nurse Gore (RIGGED)",
+      "author": "KrimzonHaze",
+      "source": "https://sketchfab.com/3d-models/horror-mutant-bloody-nurse-gore-rigged-2bc6e1cac98e458a824691009ef2433c",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "download_date": "2026-09-07",
+      "sha256_source_glb": "7a2c7f1b7c471ef8809d46cdff8498c344310cb91689e46d4eb72af03f684ff1",
+      "sha256_source_archive": "ff8b18b047a45804851cf18e22cd8829ad5f71daba35f45a870461c8de398ff1",
+      "changes": "Original geometry and UVs preserved. External glTF textures; 2K/1K tiers; base-color saturation 86%; Godot PBR roughness/metallic/alpha-scissor tuning; floor pivot and facing normalization; editable in-place skeletal animation clips; bone hitboxes. Added twelve joints and blended weights for six lower appendages; attached original needle meshes to the matching hand bones; separate elite stance and timing.",
+      "files": [
+        {
+          "path": "assets/models/enemies/nurse/LICENSE.txt",
+          "sha256": "f14ea4a0a1655297f635fd696f6271a6fb0871d90d25c9b6a6b1273bf3b85c2f",
+          "size": 368
+        },
+        {
+          "path": "assets/models/enemies/nurse/model.bin",
+          "sha256": "665bcec10ada92e719dfb5ea9645e2675a2fd0a1abf4992af7e74a04fcaedf4c",
+          "size": 10003524
+        },
+        {
+          "path": "assets/models/enemies/nurse/model.gltf",
+          "sha256": "e9be3b83cdb279441506881bef4a5a46be47074ced2b192fa2e4b5b52afc58ee",
+          "size": 41846
+        },
+        {
+          "path": "assets/models/enemies/nurse/SOURCE.json",
+          "sha256": "b9cd059a4add5c9e7664e8c37a8ca865bf04fbb7c91bd23179a522bd8ef1aaf1",
+          "size": 2728
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_00.png",
+          "sha256": "22a391b3bed61eac1ee28b380c462f7c3ce32dc209b0b2b04974d5aec6fb4040",
+          "size": 404761
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_01.png",
+          "sha256": "ca970c004265d18448e70975aee4e7ecea8795e60c4fdf7bf24247fa7df55cf4",
+          "size": 279474
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_02.png",
+          "sha256": "c6911234dce1db2abed61b1a42e59bdea657659db7ccf9948352444bb30f8fc2",
+          "size": 21234
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_03.png",
+          "sha256": "62e0bb54091e15e4f380fa3f5a35e5f14f5d7bb795d63d1bffa4b1496a612511",
+          "size": 421634
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_04.png",
+          "sha256": "e8a5228c6e5de3e7f10a9f3f22debecfe37182f7547decbb7066c635f5819002",
+          "size": 21235
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_05.png",
+          "sha256": "297bfc3b008362a9775692c4d6a34b09182acde79d13b5f4d9e18e2b3c926456",
+          "size": 847941
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_06.png",
+          "sha256": "5c8bf64ad01bbe13d9ff8a9db192d01c1a25dcc19e64f421f1858024f6bf3e9d",
+          "size": 1446785
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_07.png",
+          "sha256": "f1c5e2d2a912b94b1faf34cf40937351d418345b525aaf72db3b5326a9a9ec3b",
+          "size": 1234204
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_08.png",
+          "sha256": "5103fcc2072e38742444e8aa2b40967c9af6a38211365afb10c8835e0b7eba7a",
+          "size": 654329
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_09.png",
+          "sha256": "c31c5cd76e4aa7091626cb79d9a58500f60b0f19ef13c7301ed7bd58f19a5d98",
+          "size": 1193733
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_10.png",
+          "sha256": "9dcd31084c68e50c1a0a46b4087bfb9f805d242406c7eee4478777e120a9c446",
+          "size": 220193
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_11.png",
+          "sha256": "4f1c9194d62eed07cced2ad032841e8b93b3c2447341eeb2b82a2044b26ff6e0",
+          "size": 291555
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/high/image_12.png",
+          "sha256": "7580e0c09cf7e7b4da5ad6d2354d5b830ba2e85391adfd252d6fc873acd93b2a",
+          "size": 254106
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_00.png",
+          "sha256": "c798d3650b182010b6d7b66b3306c328055c8340107fad1e9d046d2a484d3a5f",
+          "size": 275798
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_01.png",
+          "sha256": "e4222320422a624b16657f298263f5b050e706e13103bb21dc1fecd122ae809c",
+          "size": 204138
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_02.png",
+          "sha256": "971bd93c36287e0ee880ea07da49148495ad7bf7e581f95bc011d5d733b9dfd3",
+          "size": 5692
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_03.png",
+          "sha256": "1f8b8916db63e6c4c9b0449ba52237ffd53c47c98b64c8df1dc46a48af899edd",
+          "size": 192963
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_04.png",
+          "sha256": "4100a9a0bf2f092e69aedca95d3caed804e36c8240fc3cd8ea251971c190dc45",
+          "size": 5693
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_05.png",
+          "sha256": "e88d2e0b394f833fb91129fd69e5f9ea786179b308b1dc7337a2c8503de422fb",
+          "size": 303563
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_06.png",
+          "sha256": "5c8bf64ad01bbe13d9ff8a9db192d01c1a25dcc19e64f421f1858024f6bf3e9d",
+          "size": 1446785
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_07.png",
+          "sha256": "736431e66d089519aed987f9421242df6f84e498e04c347191e8abd2be03b772",
+          "size": 738828
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_08.png",
+          "sha256": "c3effeb25d302f48b66ffd05f29e21f13de1958c20eed19e464d86a1ce674057",
+          "size": 419195
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_09.png",
+          "sha256": "63b81541dbffe42cc6be44b65c6a0eda8ee684c1b6036c11b9271c17ba30be09",
+          "size": 456631
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_10.png",
+          "sha256": "be089d8afef61b834f38c2de10c58bb79e443fafc93f3b667fc1e1b1c135b7a6",
+          "size": 64400
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_11.png",
+          "sha256": "f3c5e87ae58ee5d2c6306ef6868efb41823f3c2829bbec676bb05bad0ca50cce",
+          "size": 75073
+        },
+        {
+          "path": "assets/models/enemies/nurse/textures/low/image_12.png",
+          "sha256": "e17c5bab2b338bddc9a416d9b914e236746d70ffa17e1d37314b67e26cd13c5b",
+          "size": 75399
+        }
+      ]
+    }
+  ],
+  "failures": []
+}
