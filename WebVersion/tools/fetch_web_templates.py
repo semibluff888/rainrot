@@ -3,6 +3,7 @@ import io,json,hashlib,urllib.request,zipfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
+(ROOT/'toolchain').mkdir(parents=True,exist_ok=True)
 URL='https://github.com/godotengine/godot-builds/releases/download/4.7.1-stable/Godot_v4.7.1-stable_export_templates.tpz'
 SIZE=1280486955
 
