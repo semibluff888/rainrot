@@ -168,7 +168,12 @@ func clear_modal(next: String) -> void:
 	modal = next
 	menus.mouse_filter = Control.MOUSE_FILTER_IGNORE if next=="" else Control.MOUSE_FILTER_STOP
 	gameplay.visible = next=="" and game.started
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if next=="" and game.started else Input.MOUSE_MODE_VISIBLE
+	# Browser capture belongs to the shell's real user gesture. A queued Godot
+	# button event must not race a second request against requestPointerLock().
+	if OS.has_feature("web") and not game.automated:
+		if next!="" or not game.started:Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if next=="" and game.started else Input.MOUSE_MODE_VISIBLE
 	if is_instance_valid(game.web):game.web.mode_changed(next)
 
 func close() -> void:
@@ -221,7 +226,8 @@ func show_menu() -> void:
 func show_pause() -> void:
 	clear_modal("pause")
 	header("P A U S E D", "片刻喘息", "你的调查进度会在安全区和章节节点保存。")
-	button(menus,"继续调查",Rect2(710,350,500,65),close,true)
+	if not OS.has_feature("web") or game.automated:
+		button(menus,"继续调查",Rect2(710,350,500,65),close,true)
 	button(menus,"视听设置",Rect2(710,435,500,65),show_settings)
 	button(menus,"从最近记录继续",Rect2(710,520,500,65),func(): game.load_game())
 	button(menus,"操作说明",Rect2(710,605,500,65),show_controls)
@@ -473,8 +479,11 @@ func _input(event: InputEvent) -> void:
 	if InputMap.has_action("fullscreen") and event.is_action_pressed("fullscreen"): game.toggle_fullscreen()
 	if event.is_action_pressed("pause"):
 		if modal in ["death","ending","menu"]: return
-		if modal=="": show_pause()
-		else: close()
+		# Escape also causes pointerlockchange; either event may arrive first.
+		# Never interpret the second event as a request to close the new pause menu.
+		if OS.has_feature("web") and modal=="pause":pass
+		elif modal=="":show_pause()
+		else:close()
 		get_viewport().set_input_as_handled()
 	if game.started and event.is_action_pressed("inventory"):
 		if modal=="": show_inventory()

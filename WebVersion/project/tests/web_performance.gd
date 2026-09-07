@@ -60,6 +60,27 @@ func run(g: Node) -> void:
 	check(web.dust_time>time_before,"Returning to visible page restores effects")
 	web.diagnostic=false;web.telemetry_timer=0;web._process(2)
 	check(web.telemetry_timer==0,"Normal play does not sample diagnostics")
+
+	# The bridge must never unpause before a confirmed pointer lock.
+	game.hud.show_pause();web.pointer_locked=false;web.page_visible=true
+	web._browser_event(["resume"])
+	check(game.hud.modal=="pause","Resume without confirmed lock keeps pause")
+	web._browser_event(["lock"]);web._browser_event(["resume"])
+	check(game.hud.modal=="","Confirmed lock then resume closes pause once")
+	game.hud.show_pause();web.pointer_locked=true;web.page_visible=false
+	web._browser_event(["resume"])
+	check(game.hud.modal=="pause","Background cannot resume despite stale lock")
+	web.page_visible=true;game.hud.show_inventory();web._browser_event(["resume"])
+	check(game.hud.modal=="inventory","Late resume does not close another menu")
+	game.hud.close()
+	var cycles_ok:=true
+	for cycle in 20:
+		game.hud.show_pause();web._browser_event(["unlock"]);web._browser_event(["resume"])
+		cycles_ok=cycles_ok and game.hud.modal=="pause"
+		web._browser_event(["lock"]);web._browser_event(["resume"])
+		cycles_ok=cycles_ok and game.hud.modal==""
+	check(cycles_ok,"Twenty pause cycles each resume after exactly one confirmed lock")
+
 	var failed:=checks.filter(func(c):return not c.passed).size()
 	var result: Dictionary={"passed":checks.size()-failed,"failed":failed,"checks":checks}
 	var f:=FileAccess.open("user://web_performance_test.json",FileAccess.WRITE)

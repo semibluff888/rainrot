@@ -1,12 +1,12 @@
 [
   {
     "file": "RAINROT_Web_Deploy.zip",
-    "bytes": 44098150,
-    "sha256": "1a9c9a1ce02e2465212500cced28271d5d80ae50302b33e2b3d99a7a9bdd16a8"
+    "bytes": 44099959,
+    "sha256": "d69c787e3f97a8d184b4403a44b27f1a1797edff40525fb15e89771dd3e2f1eb"
   },
   {
     "file": "RAINROT_Web_Project.zip",
-    "bytes": 145240928,
-    "sha256": "927102c4dc5cc24a5c9211afe498f9521678a6436cefa9a6b78219c8565366c1"
+    "bytes": 145246253,
+    "sha256": "bd06c42f41696a1978186c934da94e6fcc4e843312b4f2431687b6f616fe13ba"
   }
 ]

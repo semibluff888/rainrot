@@ -41,13 +41,15 @@ func _browser_event(arguments: Array) -> void:
 			page_visible=true
 		"lock":
 			pointer_locked=true
+			if OS.has_feature("web") and game.started and game.hud.modal in ["","pause"] and Input.mouse_mode!=Input.MOUSE_MODE_CAPTURED:
+				Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 		"unlock", "hidden":
 			if str(arguments[0])=="hidden":page_visible=false
 			pointer_locked=false
 			if game.started and not game.finished and game.hud.modal=="" and not game.automated:
 				game.hud.show_pause()
 		"resume":
-			if game.started and game.hud.modal=="pause": game.hud.close()
+			if pointer_locked and page_visible and game.started and not game.finished and game.hud.modal=="pause":game.hud.close()
 		"export_save":
 			if not game.has_save():
 				game.hud.toast("还没有记录 · 开始调查后会自动保存")

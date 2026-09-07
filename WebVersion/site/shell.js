@@ -9,25 +9,72 @@
  const invalidReasons = new Set();
  const browserInfo = () => ({canvas:[canvas.width,canvas.height],css:[canvas.clientWidth,canvas.clientHeight],dpr:window.devicePixelRatio || 1,userAgent:navigator.userAgent});
  let initialBrowserInfo;
- let callback, loading = false, running = false, state = {mode:'menu'}, unlockedAt = 0;
+ let callback, loading = false, running = false, state = {mode:'menu'};
+ let pendingLock=null, lockMessage='';
  const frameSamples=[];
  const call = (type, data) => { if(callback) data === undefined ? callback(type) : callback(type,data); };
  const log = (...args) => { if(!diagnostic) return; const n=el('qa-log');n.textContent += args.join(' ')+'\n';n.scrollTop=n.scrollHeight; };
  function syncUI(){
   const playing=state.started && !state.finished && state.mode==='';
   el('toolbar').hidden=!running || playing;
-  el('recapture').hidden=!playing || !!document.pointerLockElement || testing;
+  el('recapture').hidden=!playing || document.pointerLockElement===canvas || testing;
+  el('pause-resume').hidden=!(running && state.started && !state.finished && state.mode==='pause') || testing;
+  el('pause-resume').disabled=!!pendingLock;
+  el('recapture').disabled=!!pendingLock;
+  el('pause-resume').textContent=pendingLock?'正在继续…':'继续调查';
+  el('lock-status').textContent=lockMessage;
+  el('lock-status').hidden=!lockMessage || (!playing && state.mode!=='pause');
+  positionPauseButton();
   el('storage').hidden=!running || state.persistent!==false || playing;
  }
- function lock(){
+ function positionPauseButton(){
+  const rect=canvas.getBoundingClientRect(), stage=el('stage').getBoundingClientRect();
+  const scale=Math.min(rect.width/1920,rect.height/1080);
+  Object.assign(el('pause-resume').style,{
+   left:(rect.left-stage.left+(rect.width-1920*scale)/2+710*scale)+'px',
+   top:(rect.top-stage.top+(rect.height-1080*scale)/2+350*scale)+'px',
+   width:(500*scale)+'px',height:(65*scale)+'px',fontSize:(24*scale)+'px'
+  });
+ }
+ function canLock(){return state.started && !state.finished && (state.mode==='' || state.mode==='pause') && !document.hidden && document.hasFocus();}
+ function cancelLock(){pendingLock=null;syncUI();}
+ function lockFailed(error,request){
+  if(pendingLock!==request)return;
+  pendingLock=null;
+  lockMessage='浏览器未能锁定鼠标，请再点一次继续';
+  log('POINTER_LOCK',error?.name || 'error',error?.message || '');
+  syncUI();
+ }
+ function finishLock(){
+  const request=pendingLock;
+  if(document.pointerLockElement!==canvas)return;
+  if(!canLock() || (!request && state.mode!=='') || testing){
+   pendingLock=null;
+   document.exitPointerLock();
+   syncUI();
+   return;
+  }
+  pendingLock=null;lockMessage='';
+  call('lock');
+  // The engine stays paused until the browser confirms ownership of this canvas.
+  if(request?.resume && state.mode==='pause')call('resume');
+  syncUI();
+ }
+ function lock(resume=false){
+  if(pendingLock || testing || !canLock())return;
   canvas.focus();
-  if(!document.pointerLockElement){const p=canvas.requestPointerLock();if(p && p.catch)p.catch(error=>{log('POINTER_LOCK',error.name,error.message);syncUI();});}
+  const request={resume};pendingLock=request;lockMessage='';syncUI();
+  if(document.pointerLockElement===canvas){finishLock();return;}
+  try{
+   const promise=canvas.requestPointerLock();
+   if(promise && promise.catch)promise.catch(error=>lockFailed(error,request));
+  }catch(error){lockFailed(error,request);}
  }
  window.RainrotWeb = {
   diagnostic,
   get pageVisible(){return !document.hidden && document.hasFocus();},
   connectGame(fn){callback=fn;},
-  update(value){if(!gameReady){gameReady=performance.now();initialBrowserInfo=browserInfo();}state=value;running=true;el('entry').hidden=true;syncUI();},
+  update(value){if(!gameReady){gameReady=performance.now();initialBrowserInfo=browserInfo();}state=value;if(state.mode!=='' && state.mode!=='pause'){pendingLock=null;lockMessage='';}running=true;el('entry').hidden=true;syncUI();},
   telemetry(value){if(diagnostic){el('telemetry').textContent=JSON.stringify({...value,pointerLocked:!!document.pointerLockElement,persistent:state.persistent,canvas:[canvas.width,canvas.height],dpr:window.devicePixelRatio || 1});if(value.modal==='' && value.seconds>3){if(frameSamples.length>=1800)frameSamples.shift();frameSamples.push({fps:value.fps,stage:value.stage,quality:value.quality});}}},
   report(kind,result){if(diagnostic){
    if(kind==='benchmark_progress')benchmarkStarted=true;
@@ -38,18 +85,20 @@
   fullscreen(){if(!document.fullscreenElement)el('stage').requestFullscreen().catch(()=>{});else document.exitFullscreen().catch(()=>{});}
  };
  document.addEventListener('pointerlockchange',()=>{
-  if(!document.pointerLockElement){unlockedAt=performance.now();call('unlock');}else call('lock');
+  if(document.pointerLockElement!==canvas){pendingLock=null;call('unlock');}else finishLock();
   syncUI();
  });
- document.addEventListener('visibilitychange',()=>{if(document.hidden){call('hidden');if(benchmarkStarted)invalidReasons.add('page_hidden');}else call('visible');});
+ document.addEventListener('pointerlockerror',()=>{if(pendingLock)lockFailed(new Error('Pointer lock rejected'),pendingLock);});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelLock();call('hidden');if(benchmarkStarted)invalidReasons.add('page_hidden');}else call('visible');});
  window.addEventListener('resize',()=>{if(benchmarkStarted)invalidReasons.add('window_resized');});
  window.addEventListener('focus',()=>{if(!document.hidden)call('visible');});
- window.addEventListener('blur',()=>{call('hidden');if(benchmarkStarted)invalidReasons.add('window_blurred');});
+ window.addEventListener('blur',()=>{cancelLock();call('hidden');if(benchmarkStarted)invalidReasons.add('window_blurred');});
  canvas.addEventListener('contextmenu',e=>e.preventDefault());
  canvas.addEventListener('keydown',e=>{if(['Tab','Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code))e.preventDefault();});
  // A browser may deny capture immediately after Esc. This overlay supplies a new user gesture.
- el('recapture').onclick=()=>{lock();call('resume');};
- canvas.addEventListener('click',()=>{if(state.started && state.mode==='' && performance.now()-unlockedAt>120)lock();});
+ el('recapture').onclick=()=>lock();
+ el('pause-resume').onclick=()=>lock(true);
+ canvas.addEventListener('click',()=>{if(state.started && state.mode==='')lock();});
  el('fullscreen').onclick=()=>RainrotWeb.fullscreen();
  el('help').onclick=()=>{call('unlock');el('manual').showModal();};
  el('close-help').onclick=()=>el('manual').close();
@@ -70,6 +119,7 @@
   resizeFrame=0;
   const rect=el('stage').getBoundingClientRect(), dpr=window.devicePixelRatio || 1;
   if(rect.width<=0 || rect.height<=0)return;
+  positionPauseButton();
   const scale=Math.min(dpr,1920/rect.width,1080/rect.height);
   const width=Math.max(1,Math.floor(rect.width*scale)), height=Math.max(1,Math.floor(rect.height*scale));
   if(canvas.width===width && canvas.height===height)return;
