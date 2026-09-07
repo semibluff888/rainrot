@@ -1,0 +1,215 @@
+{
+  "passed": true,
+  "quality": 1,
+  "renderer": "NVIDIA GeForce RTX 3080 Ti",
+  "repeats": 3,
+  "results": [
+    {
+      "average_ms": 8.95538447761194,
+      "draw_calls_median": 2791,
+      "elapsed_seconds": 30.000538,
+      "frames": 3350,
+      "median_ms": 8.595,
+      "over_50ms": 0,
+      "p95_ms": 11.471,
+      "quality": 1,
+      "repeat": 1,
+      "scaling_3d": 0.819999992847443,
+      "scene": "corridor_smily",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 10.1393102399459,
+      "draw_calls_median": 3041,
+      "elapsed_seconds": 30.002219,
+      "frames": 2959,
+      "median_ms": 9.508,
+      "over_50ms": 0,
+      "p95_ms": 14.487,
+      "quality": 1,
+      "repeat": 1,
+      "scaling_3d": 0.819999992847443,
+      "scene": "morgue_nurse",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 6.31338236531984,
+      "draw_calls_median": 1723,
+      "elapsed_seconds": 30.001193,
+      "frames": 4752,
+      "median_ms": 6.058,
+      "over_50ms": 0,
+      "p95_ms": 8.308,
+      "quality": 1,
+      "repeat": 1,
+      "scaling_3d": 0.819999992847443,
+      "scene": "laboratory_nurse",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 6.4171343315508,
+      "draw_calls_median": 1750,
+      "elapsed_seconds": 30.000103,
+      "frames": 4675,
+      "median_ms": 6.062,
+      "over_50ms": 0,
+      "p95_ms": 8.719,
+      "quality": 1,
+      "repeat": 1,
+      "scaling_3d": 0.819999992847443,
+      "scene": "pursuit_nurse",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 9.01927261797415,
+      "draw_calls_median": 2791,
+      "elapsed_seconds": 30.00712,
+      "frames": 3327,
+      "median_ms": 8.573,
+      "over_50ms": 0,
+      "p95_ms": 12.19,
+      "quality": 1,
+      "repeat": 2,
+      "scaling_3d": 0.819999992847443,
+      "scene": "corridor_smily",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 9.16714359914454,
+      "draw_calls_median": 3041,
+      "elapsed_seconds": 30.004061,
+      "frames": 3273,
+      "median_ms": 8.902,
+      "over_50ms": 0,
+      "p95_ms": 11.268,
+      "quality": 1,
+      "repeat": 2,
+      "scaling_3d": 0.819999992847443,
+      "scene": "morgue_nurse",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 6.12824979575164,
+      "draw_calls_median": 1723,
+      "elapsed_seconds": 30.003911,
+      "frames": 4896,
+      "median_ms": 6.057,
+      "over_50ms": 0,
+      "p95_ms": 7.007,
+      "quality": 1,
+      "repeat": 2,
+      "scaling_3d": 0.819999992847443,
+      "scene": "laboratory_nurse",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 6.31973588879528,
+      "draw_calls_median": 1750,
+      "elapsed_seconds": 30.006106,
+      "frames": 4748,
+      "median_ms": 6.058,
+      "over_50ms": 0,
+      "p95_ms": 8.475,
+      "quality": 1,
+      "repeat": 2,
+      "scaling_3d": 0.819999992847443,
+      "scene": "pursuit_nurse",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 8.68805616676319,
+      "draw_calls_median": 2791,
+      "elapsed_seconds": 30.008546,
+      "frames": 3454,
+      "median_ms": 8.194,
+      "over_50ms": 0,
+      "p95_ms": 12.025,
+      "quality": 1,
+      "repeat": 3,
+      "scaling_3d": 0.819999992847443,
+      "scene": "corridor_smily",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 10.0812489919355,
+      "draw_calls_median": 3041,
+      "elapsed_seconds": 30.001797,
+      "frames": 2976,
+      "median_ms": 9.435,
+      "over_50ms": 0,
+      "p95_ms": 14.549,
+      "quality": 1,
+      "repeat": 3,
+      "scaling_3d": 0.819999992847443,
+      "scene": "morgue_nurse",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 6.28361486910992,
+      "draw_calls_median": 1723,
+      "elapsed_seconds": 30.004261,
+      "frames": 4775,
+      "median_ms": 6.059,
+      "over_50ms": 0,
+      "p95_ms": 8.034,
+      "quality": 1,
+      "repeat": 3,
+      "scaling_3d": 0.819999992847443,
+      "scene": "laboratory_nurse",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "average_ms": 6.33411315178385,
+      "draw_calls_median": 1750,
+      "elapsed_seconds": 30.004694,
+      "frames": 4737,
+      "median_ms": 6.059,
+      "over_50ms": 0,
+      "p95_ms": 8.389,
+      "quality": 1,
+      "repeat": 3,
+      "scaling_3d": 0.819999992847443,
+      "scene": "pursuit_nurse",
+      "viewport_size": [
+        1920.0,
+        1080.0
+      ]
+    }
+  ],
+  "runtime": "native_compatibility",
+  "sample_seconds": 30.0,
+  "warmup_seconds": 5
+}

@@ -7,9 +7,9 @@
   },
   {
     "file": "game.pck",
-    "bytes": 39722184,
-    "gzip_bytes": 33665649,
-    "sha256": "6a323475f2c073e4a59dec73b7e639f301c76b6d28e7f5a0cf05b5dbb2b5b385"
+    "bytes": 39747896,
+    "gzip_bytes": 33673455,
+    "sha256": "7266029dbb37b23a0823080ccd24666d9dd634d0c8619ed8d8b2d23fad12068f"
   },
   {
     "file": "game.js",

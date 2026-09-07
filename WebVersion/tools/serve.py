@@ -36,8 +36,10 @@ class Handler(SimpleHTTPRequestHandler):
         super().end_headers()
 
 if __name__ == '__main__':
-    ap=argparse.ArgumentParser(); ap.add_argument('--port',type=int,default=9089)
+    ap=argparse.ArgumentParser(); ap.add_argument('--port',type=int,default=9089); ap.add_argument('--directory',type=Path,default=ROOT)
     opts=ap.parse_args()
+    ROOT=opts.directory.resolve()
+    if not ROOT.is_dir():ap.error('Site directory does not exist')
     server=ThreadingHTTPServer(('127.0.0.1',opts.port),Handler)
     print(f'RAINROT Web: http://127.0.0.1:{opts.port}/',flush=True)
     server.serve_forever()

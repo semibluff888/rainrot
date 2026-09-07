@@ -1,0 +1,214 @@
+{
+	"checks": [
+		{
+			"name": "west_patient uses original model and seven gameplay clips",
+			"passed": true
+		},
+		{
+			"name": "west_patient has separate bone hitboxes",
+			"passed": true
+		},
+		{
+			"name": "west_patient profile baseline",
+			"passed": true
+		},
+		{
+			"name": "east_patient uses original model and seven gameplay clips",
+			"passed": true
+		},
+		{
+			"name": "east_patient has separate bone hitboxes",
+			"passed": true
+		},
+		{
+			"name": "east_patient profile baseline",
+			"passed": true
+		},
+		{
+			"name": "ward_patient uses original model and seven gameplay clips",
+			"passed": true
+		},
+		{
+			"name": "ward_patient has separate bone hitboxes",
+			"passed": true
+		},
+		{
+			"name": "ward_patient profile baseline",
+			"passed": true
+		},
+		{
+			"name": "the_orderly uses original model and seven gameplay clips",
+			"passed": true
+		},
+		{
+			"name": "the_orderly has separate bone hitboxes",
+			"passed": true
+		},
+		{
+			"name": "the_orderly profile baseline",
+			"passed": true
+		},
+		{
+			"name": "Nurse remains dormant until first cold-room opening",
+			"passed": true
+		},
+		{
+			"name": "Cold-room event activates nurse inside morgue",
+			"passed": true
+		},
+		{
+			"name": "All six nurse appendages have independently animated support joints",
+			"passed": true
+		},
+		{
+			"name": "Nurse NeedleL blade remains near the matching animated hand",
+			"passed": true
+		},
+		{
+			"name": "Nurse NeedleR blade remains near the matching animated hand",
+			"passed": true
+		},
+		{
+			"name": "First sight enters visible warning without moving camera",
+			"passed": true
+		},
+		{
+			"name": "First appearance never forces player view",
+			"passed": true
+		},
+		{
+			"name": "Repeated sync does not restart encounter",
+			"passed": true
+		},
+		{
+			"name": "Alert transitions to pursuit",
+			"passed": true
+		},
+		{
+			"name": "west_patient head target follows animated skeleton",
+			"passed": true
+		},
+		{
+			"name": "west_patient real camera ray resolves head damage",
+			"passed": true
+		},
+		{
+			"name": "west_patient web low tier uses 512px texture",
+			"passed": true
+		},
+		{
+			"name": "west_patient real camera ray resolves body damage",
+			"passed": true
+		},
+		{
+			"name": "west_patient web low tier uses 512px texture",
+			"passed": true
+		},
+		{
+			"name": "east_patient head target follows animated skeleton",
+			"passed": true
+		},
+		{
+			"name": "east_patient real camera ray resolves head damage",
+			"passed": true
+		},
+		{
+			"name": "east_patient web low tier uses 512px texture",
+			"passed": true
+		},
+		{
+			"name": "east_patient real camera ray resolves body damage",
+			"passed": true
+		},
+		{
+			"name": "east_patient web low tier uses 512px texture",
+			"passed": true
+		},
+		{
+			"name": "Nurse warning is at least 0.65 seconds",
+			"passed": true
+		},
+		{
+			"name": "Nurse cannot damage during windup",
+			"passed": true
+		},
+		{
+			"name": "Stab lands once at the telegraphed time",
+			"passed": true
+		},
+		{
+			"name": "Recovery cannot deal a second hit",
+			"passed": true
+		},
+		{
+			"name": "Bullet stagger cancels pending damage",
+			"passed": true
+		},
+		{
+			"name": "Death cancels attack and disables body",
+			"passed": true
+		},
+		{
+			"name": "Dead nurse has no bullet hitboxes",
+			"passed": true
+		},
+		{
+			"name": "Solid obstruction prevents close-range damage through a wall",
+			"passed": true
+		},
+		{
+			"name": "inventory freezes motion, animation, damage and windup",
+			"passed": true
+		},
+		{
+			"name": "inventory pauses spatial creature sound",
+			"passed": true
+		},
+		{
+			"name": "note freezes motion, animation, damage and windup",
+			"passed": true
+		},
+		{
+			"name": "note pauses spatial creature sound",
+			"passed": true
+		},
+		{
+			"name": "pause freezes motion, animation, damage and windup",
+			"passed": true
+		},
+		{
+			"name": "pause pauses spatial creature sound",
+			"passed": true
+		},
+		{
+			"name": "Safe room breaks nurse pursuit",
+			"passed": true
+		},
+		{
+			"name": "Twenty headshots stagger elite without killing it",
+			"passed": true
+		},
+		{
+			"name": "Version 1 enemy checkpoint writes successfully",
+			"passed": true
+		},
+		{
+			"name": "Save schema remains version 1",
+			"passed": true
+		},
+		{
+			"name": "Old enemy IDs retain death across load",
+			"passed": true
+		},
+		{
+			"name": "Living enemy restores role and skips first appearance",
+			"passed": true
+		},
+		{
+			"name": "Final checkpoint restores elite without replaying introduction",
+			"passed": true
+		}
+	],
+	"failed": 0,
+	"passed": 52
+}

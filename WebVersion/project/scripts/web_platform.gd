@@ -6,7 +6,13 @@ var bridge_callback: JavaScriptObject
 var dust: MultiMeshInstance3D
 var dust_time := 0.0
 var telemetry_timer := 0.0
-var syncing := false
+var diagnostic := false
+var page_visible := true
+var dust_timer := 0.0
+var shadow_timer := 0.0
+var shadow_lights: Array[Light3D] = []
+var shadow_spots: Array[SpotLight3D] = []
+var selected_spots: Array[SpotLight3D] = []
 var pointer_locked := false
 
 func input_suspended() -> bool:
@@ -20,16 +26,23 @@ func _ready() -> void:
 	if OS.has_feature("web"):
 		bridge_callback = JavaScriptBridge.create_callback(_browser_event)
 		var shell := JavaScriptBridge.get_interface("RainrotWeb")
-		if shell: shell.connectGame(bridge_callback)
+		if shell:
+			diagnostic=bool(shell.diagnostic)
+			page_visible=bool(shell.pageVisible)
+			shell.connectGame(bridge_callback)
+	collect_shadow_lights()
 	create_dust()
 	batch_static_boxes()
 
 func _browser_event(arguments: Array) -> void:
 	if arguments.is_empty(): return
 	match str(arguments[0]):
+		"visible":
+			page_visible=true
 		"lock":
 			pointer_locked=true
 		"unlock", "hidden":
+			if str(arguments[0])=="hidden":page_visible=false
 			pointer_locked=false
 			if game.started and not game.finished and game.hud.modal=="" and not game.automated:
 				game.hud.show_pause()
@@ -82,9 +95,47 @@ func apply_quality(quality: int) -> void:
 	game.player.camera.far=65
 	if is_instance_valid(dust):dust.visible=quality>0
 	for e in game.enemies:e.visual.set_quality(quality)
-	var moons:=get_tree().get_nodes_in_group("moonlights")
-	moons.sort_custom(func(a,b):return a.global_position.distance_squared_to(game.player.global_position)<b.global_position.distance_squared_to(game.player.global_position))
-	for i in moons.size():moons[i].shadow_enabled=i<(2 if quality==2 else 1 if quality==1 else 0)
+	update_shadow_lights(true)
+	shadow_timer=0
+
+func collect_shadow_lights() -> void:
+	# Cache original authorship before any quality preset disables shadows.
+	for node in game.hospital.find_children("*","Light3D",true,false):
+		if not node.shadow_enabled:continue
+		shadow_lights.append(node)
+		if node is SpotLight3D:shadow_spots.append(node)
+
+func update_shadow_lights(force: bool=false) -> void:
+	var budget: int = int(game.settings.quality)
+	if force:selected_spots.clear()
+	var ranked := shadow_spots.duplicate()
+	var where: Vector3 = game.player.global_position
+	ranked.sort_custom(func(a,b):return a.global_position.distance_squared_to(where)<b.global_position.distance_squared_to(where))
+	while selected_spots.size()>budget:selected_spots.pop_back()
+	for candidate in ranked:
+		if budget==0:break
+		if candidate in selected_spots:continue
+		if selected_spots.size()<budget:
+			selected_spots.append(candidate)
+			continue
+		var farthest: SpotLight3D=selected_spots[0]
+		for current in selected_spots:
+			if current.global_position.distance_squared_to(where)>farthest.global_position.distance_squared_to(where):farthest=current
+		if candidate.global_position.distance_to(where)+2.0<=farthest.global_position.distance_to(where):
+			selected_spots.erase(farthest)
+			selected_spots.append(candidate)
+	for light in shadow_lights:
+		var enabled: bool = budget>0 and (light is DirectionalLight3D or (light is SpotLight3D and light in selected_spots))
+		if light.shadow_enabled!=enabled:light.shadow_enabled=enabled
+
+func effects_active() -> bool:
+	return page_visible and (not game.started or (not game.finished and game.hud.modal=="" and not input_suspended()))
+
+func update_dust() -> void:
+	for i in dust.multimesh.instance_count:
+		var y:=fposmod(i*.137+dust_time*.018,2.5)+.18
+		var x:=sin(i*2.37)*2.3+sin(dust_time*.14+i)*.035
+		dust.multimesh.set_instance_transform(i,Transform3D(Basis.IDENTITY,Vector3(x,y,9-fposmod(i*1.137,46))))
 
 func create_dust() -> void:
 	dust=MultiMeshInstance3D.new();dust.name="WebDust"
@@ -99,6 +150,7 @@ func create_dust() -> void:
 	var multi:=MultiMesh.new();multi.transform_format=MultiMesh.TRANSFORM_3D;multi.mesh=mesh;multi.instance_count=80
 	dust.multimesh=multi;dust.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	game.hospital.add_child(dust)
+	update_dust()
 
 func batch_static_boxes() -> void:
 	# Share a unit box and instance transforms within small spatial cells. Source
@@ -137,14 +189,24 @@ func batch_static_boxes() -> void:
 	print("WEB_STATIC_BATCH instances=",batched)
 
 func _process(delta: float) -> void:
-	dust_time+=delta
-	if is_instance_valid(dust) and dust.visible:
-		for i in 80:
-			var y:=fposmod(i*.137+dust_time*.018,2.5)+.18
-			var x:=sin(i*2.37)*2.3+sin(dust_time*.14+i)*.035
-			dust.multimesh.set_instance_transform(i,Transform3D(Basis.IDENTITY,Vector3(x,y,9-fposmod(i*1.137,46))))
+	if effects_active():
+		if is_instance_valid(dust) and dust.visible:
+			dust_time+=delta
+			dust_timer+=delta
+			if dust_timer>=.05:
+				dust_timer=fmod(dust_timer,.05)
+				update_dust()
+		shadow_timer+=delta
+		if shadow_timer>=.5:
+			shadow_timer=fmod(shadow_timer,.5)
+			update_shadow_lights()
+	if not diagnostic or not OS.has_feature("web"):return
 	telemetry_timer+=delta
-	if telemetry_timer>1 and OS.has_feature("web"):
+	if telemetry_timer>1:
 		telemetry_timer=0
-		var payload:=JSON.stringify({"fps":Engine.get_frames_per_second(),"quality":game.settings.quality,"stage":game.state.stage,"modal":game.hud.modal,"health":game.state.health,"seconds":snappedf(game.state.seconds,.1),"hasSave":game.has_save()})
+		var shadow_count:=0
+		for light in shadow_lights:
+			if light.shadow_enabled:shadow_count+=1
+		if game.player.torch.shadow_enabled:shadow_count+=1
+		var payload:=JSON.stringify({"fps":Engine.get_frames_per_second(),"quality":game.settings.quality,"stage":game.state.stage,"modal":game.hud.modal,"health":game.state.health,"seconds":snappedf(game.state.seconds,.1),"hasSave":game.has_save(),"shadow_lights":shadow_count,"scaling_3d":game.get_viewport().scaling_3d_scale})
 		JavaScriptBridge.eval("window.RainrotWeb && window.RainrotWeb.telemetry("+payload+")",true)

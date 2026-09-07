@@ -1,0 +1,122 @@
+{
+	"checks": [
+		{
+			"name": "Quality 0 bounds all scene and torch shadows",
+			"passed": true
+		},
+		{
+			"name": "Torch shadow follows quality 0",
+			"passed": true
+		},
+		{
+			"name": "3D scale retained 0",
+			"passed": true
+		},
+		{
+			"name": "Quality 1 bounds all scene and torch shadows",
+			"passed": true
+		},
+		{
+			"name": "Torch shadow follows quality 1",
+			"passed": true
+		},
+		{
+			"name": "3D scale retained 1",
+			"passed": true
+		},
+		{
+			"name": "Quality 2 bounds all scene and torch shadows",
+			"passed": true
+		},
+		{
+			"name": "Torch shadow follows quality 2",
+			"passed": true
+		},
+		{
+			"name": "3D scale retained 2",
+			"passed": true
+		},
+		{
+			"name": "Quality 0 bounds all scene and torch shadows",
+			"passed": true
+		},
+		{
+			"name": "Torch shadow follows quality 0",
+			"passed": true
+		},
+		{
+			"name": "3D scale retained 0",
+			"passed": true
+		},
+		{
+			"name": "Quality 2 bounds all scene and torch shadows",
+			"passed": true
+		},
+		{
+			"name": "Torch shadow follows quality 2",
+			"passed": true
+		},
+		{
+			"name": "3D scale retained 2",
+			"passed": true
+		},
+		{
+			"name": "Quality 1 bounds all scene and torch shadows",
+			"passed": true
+		},
+		{
+			"name": "Torch shadow follows quality 1",
+			"passed": true
+		},
+		{
+			"name": "3D scale retained 1",
+			"passed": true
+		},
+		{
+			"name": "Nearest spotlight selected initially",
+			"passed": true
+		},
+		{
+			"name": "One metre improvement does not switch shadows",
+			"passed": true
+		},
+		{
+			"name": "More than two metres improvement switches shadows",
+			"passed": true
+		},
+		{
+			"name": "Returning near midpoint does not flicker",
+			"passed": true
+		},
+		{
+			"name": "Dust does not upload every frame",
+			"passed": true
+		},
+		{
+			"name": "Dust updates at 50 ms",
+			"passed": true
+		},
+		{
+			"name": "Dust movement keeps accumulated time",
+			"passed": true
+		},
+		{
+			"name": "Pause freezes dust",
+			"passed": true
+		},
+		{
+			"name": "Background freezes dust",
+			"passed": true
+		},
+		{
+			"name": "Returning to visible page restores effects",
+			"passed": true
+		},
+		{
+			"name": "Normal play does not sample diagnostics",
+			"passed": true
+		}
+	],
+	"failed": 0,
+	"passed": 29
+}

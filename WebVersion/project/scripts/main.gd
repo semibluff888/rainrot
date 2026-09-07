@@ -31,7 +31,7 @@ func _ready() -> void:
 	setup_input()
 	load_settings()
 	automated = OS.get_cmdline_user_args().has("--test") or OS.get_cmdline_user_args().has("--capture") or OS.get_cmdline_user_args().has("--benchmark") or OS.get_cmdline_user_args().has("--walkthrough")
-	automated = automated or OS.get_cmdline_user_args().has("--enemy-test") or OS.get_cmdline_user_args().has("--enemy-showcase")
+	automated = automated or OS.get_cmdline_user_args().has("--web-performance-test") or OS.get_cmdline_user_args().has("--enemy-test") or OS.get_cmdline_user_args().has("--enemy-showcase")
 	if automated: save_path = "user://"+("capture" if OS.get_cmdline_user_args().has("--capture") else "test")+"_progress.json"
 	hospital = load("res://scenes/hospital.tscn").instantiate()
 	add_child(hospital)
@@ -58,6 +58,8 @@ func _ready() -> void:
 	web.mode_changed("menu")
 	if OS.get_cmdline_user_args().has("--test"):
 		call_deferred("run_tests")
+	elif OS.get_cmdline_user_args().has("--web-performance-test"):
+		call_deferred("run_web_performance_tests")
 	elif OS.get_cmdline_user_args().has("--capture"):
 		call_deferred("capture_gallery")
 	elif OS.get_cmdline_user_args().has("--benchmark"):
@@ -395,50 +397,11 @@ func screenshot(id_: String) -> void:
 	print("CAPTURE ",id_," ",image.get_size())
 
 func run_benchmark() -> void:
-	DisplayServer.window_set_size(Vector2i(1920,1080))
-	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
-	RenderingServer.viewport_set_measure_render_time(get_viewport().get_viewport_rid(),true)
-	start_new()
-	await wait_frames(180)
-	var results: Array = []
-	settings.quality=2
-	apply_settings()
-	state.collected.append("cold_event")
-	for shot in [["corridor_smily",Vector3(0,.05,-8),0.0,1,0,Vector3(0,.05,-12)],["morgue_nurse",Vector3(-4.5,.05,-35.2),-.3,2,1,Vector3(-5.5,.05,-31.7)],["laboratory_nurse",Vector3(9,-3.1,-20),0.0,4,3,Vector3(9,-3.1,-24)],["pursuit_nurse",Vector3(17.5,.05,-13),0.0,4,3,Vector3(17.5,.05,-17)]]:
-		state.stage = shot[3]
-		player.position = shot[1]
-		player.rotation.y = shot[2]
-		for e in enemies: e.sync()
-		for e in enemies:
-			e.set_physics_process(false)
-			e.visible=false
-		var featured: WardEnemy=enemies[shot[4]]
-		featured.position=shot[5];featured.rotation.y=PI
-		featured.visible=true;featured.is_active=true;featured.mode=WardEnemy.Mode.CHASE
-		featured.set_physics_process(true)
-		var look_direction:Vector3=(featured.get_aim_point("body")-player.camera.global_position).normalized()
-		player.rotation.y=atan2(-look_direction.x,-look_direction.z);player.pitch=asin(look_direction.y)
-		player.head.rotation.x=player.pitch
-		await wait_frames(60)
-		# Fix the camera while keeping enemy simulation and effects active.
-		player.enabled=false
-		var samples: Array[float] = []
-		var gpu_sum := 0.0
-		var cpu_sum := 0.0
-		for i in 300:
-			state.health=100
-			var before := Time.get_ticks_usec()
-			await RenderingServer.frame_post_draw
-			await get_tree().process_frame
-			samples.append((Time.get_ticks_usec()-before)/1000.0)
-			gpu_sum+=RenderingServer.viewport_get_measured_render_time_gpu(get_viewport().get_viewport_rid())
-			cpu_sum+=RenderingServer.viewport_get_measured_render_time_cpu(get_viewport().get_viewport_rid())
-		await screenshot("benchmark_"+shot[0])
-		samples.sort()
-		var sum := 0.0
-		for s in samples: sum+=s
-		results.append({"scene":shot[0],"average_ms":sum/samples.size(),"p95_ms":samples[int(samples.size()*.95)],"fps":1000/(sum/samples.size()),"gpu_ms":gpu_sum/300,"render_cpu_ms":cpu_sum/300,"draw_calls":get_viewport().get_render_info(Viewport.RENDER_INFO_TYPE_VISIBLE,Viewport.RENDER_INFO_DRAW_CALLS_IN_FRAME)})
-	var file := FileAccess.open("res://captures/benchmark.json",FileAccess.WRITE)
-	file.store_string(JSON.stringify({"renderer":RenderingServer.get_video_adapter_name(),"resolution":[1920,1080],"quality":settings.quality,"results":results},"\t"))
-	print("BENCHMARK ",JSON.stringify(results))
-	get_tree().quit()
+	var benchmark = load("res://tests/web_benchmark.gd").new()
+	add_child(benchmark)
+	await benchmark.run(self)
+
+func run_web_performance_tests() -> void:
+	var test = load("res://tests/web_performance.gd").new()
+	add_child(test)
+	await test.run(self)

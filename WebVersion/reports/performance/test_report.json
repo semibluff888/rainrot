@@ -1,0 +1,226 @@
+{
+	"checks": [
+		{
+			"name": "Cabinet rejects out-of-sequence completion",
+			"passed": true
+		},
+		{
+			"name": "Archive rejects premature submission",
+			"passed": true
+		},
+		{
+			"name": "Termination requires underground access",
+			"passed": true
+		},
+		{
+			"name": "Overloaded power circuit rejected",
+			"passed": true
+		},
+		{
+			"name": "Correct circuit restores power",
+			"passed": true
+		},
+		{
+			"name": "Power reward cannot repeat",
+			"passed": true
+		},
+		{
+			"name": "Wrong cabinet code rejected",
+			"passed": true
+		},
+		{
+			"name": "Full six-slot inventory rejects supplies atomically",
+			"passed": true
+		},
+		{
+			"name": "Critical key obtained with full supply inventory",
+			"passed": true
+		},
+		{
+			"name": "Cabinet reward cannot repeat",
+			"passed": true
+		},
+		{
+			"name": "Correct tissue association grants access card",
+			"passed": true
+		},
+		{
+			"name": "Zero-ammo player can unlock escape",
+			"passed": true
+		},
+		{
+			"name": "Termination cannot repeat",
+			"passed": true
+		},
+		{
+			"name": "Versioned JSON roundtrip preserves progression",
+			"passed": true
+		},
+		{
+			"name": "Unsupported save versions rejected",
+			"passed": true
+		},
+		{
+			"name": "Corrupted save rejected",
+			"passed": true
+		},
+		{
+			"name": "Malformed inventory rejected",
+			"passed": true
+		},
+		{
+			"name": "Reload consumes reserve and releases slot",
+			"passed": true
+		},
+		{
+			"name": "Treatment heals and releases inventory slot",
+			"passed": true
+		},
+		{
+			"name": "Ammo stack limit respected",
+			"passed": true
+		},
+		{
+			"name": "Player starts on a solid floor",
+			"passed": true
+		},
+		{
+			"name": "World interactions installed",
+			"passed": true
+		},
+		{
+			"name": "Pharmacy gate locked before restoration",
+			"passed": true
+		},
+		{
+			"name": "Cold room requires key",
+			"passed": true
+		},
+		{
+			"name": "Stairwell requires card",
+			"passed": true
+		},
+		{
+			"name": "Repeated pickup interaction cannot duplicate ammunition",
+			"passed": true
+		},
+		{
+			"name": "Pickup hides and records the collection",
+			"passed": true
+		},
+		{
+			"name": "Reading files twice does not duplicate journal",
+			"passed": true
+		},
+		{
+			"name": "Both power and gate state are connected",
+			"passed": true
+		},
+		{
+			"name": "First infection event activates enemy",
+			"passed": true
+		},
+		{
+			"name": "Archive unlocks physical stairwell door",
+			"passed": true
+		},
+		{
+			"name": "Walk traverses the corridor without collision traps",
+			"passed": true
+		},
+		{
+			"name": "Open doorway passes full player capsule",
+			"passed": true
+		},
+		{
+			"name": "Staircase descends smoothly into laboratory",
+			"passed": true
+		},
+		{
+			"name": "Staircase ascends with standing clearance",
+			"passed": true
+		},
+		{
+			"name": "Navigation connected: [(0.0, 0.0, 5.0), (17.5, 0.0, -25.0)]",
+			"passed": true
+		},
+		{
+			"name": "Navigation connected: [(17.5, 0.0, -20.0), (8.0, -3.2, -20.0)]",
+			"passed": true
+		},
+		{
+			"name": "Navigation connected: [(0.0, 0.0, -20.0), (-8.0, 0.0, -20.0)]",
+			"passed": true
+		},
+		{
+			"name": "Atomic checkpoint write succeeds",
+			"passed": true
+		},
+		{
+			"name": "Reload restores health and progression",
+			"passed": true
+		},
+		{
+			"name": "Reload does not respawn collected supplies",
+			"passed": true
+		},
+		{
+			"name": "Reload restores door position",
+			"passed": true
+		},
+		{
+			"name": "Safe-room region correctly identified",
+			"passed": true
+		},
+		{
+			"name": "Safe room prevents damage",
+			"passed": true
+		},
+		{
+			"name": "Lethal damage opens retry screen",
+			"passed": true
+		},
+		{
+			"name": "Retry restores playable input",
+			"passed": true
+		},
+		{
+			"name": "Camera hitscan damages visible enemy and consumes one round",
+			"passed": true
+		},
+		{
+			"name": "Headshots stop the infected and persist its death",
+			"passed": true
+		},
+		{
+			"name": "Pause suppresses player movement",
+			"passed": true
+		},
+		{
+			"name": "Enemy sees an unobstructed player",
+			"passed": true
+		},
+		{
+			"name": "Enemy follows navigation toward a seen target",
+			"passed": true
+		},
+		{
+			"name": "Safe room breaks pursuit",
+			"passed": true
+		},
+		{
+			"name": "Final pursuer spawns on termination",
+			"passed": true
+		},
+		{
+			"name": "Final pursuer can be staggered but survives",
+			"passed": true
+		},
+		{
+			"name": "Zero-ammunition exit completes the chapter",
+			"passed": true
+		}
+	],
+	"failed": 0,
+	"passed": 55
+}

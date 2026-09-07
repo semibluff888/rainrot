@@ -1,0 +1,71 @@
+{
+  "runtime": "native_compatibility",
+  "browser_acceptance": "pending: browser control rejected API-key authentication",
+  "browser_20_percent_target_verified": false,
+  "comparison": [
+    {
+      "scene": "corridor_smily",
+      "baseline_p95_median_ms": 12.025,
+      "optimized_p95_median_ms": 9.721,
+      "p95_reduction_percent": 19.16,
+      "baseline_draw_calls": 2791,
+      "optimized_draw_calls": 2277,
+      "baseline_p95_range": [
+        11.471,
+        12.19
+      ],
+      "optimized_p95_range": [
+        9.214,
+        10.0
+      ]
+    },
+    {
+      "scene": "morgue_nurse",
+      "baseline_p95_median_ms": 14.487,
+      "optimized_p95_median_ms": 11.27,
+      "p95_reduction_percent": 22.21,
+      "baseline_draw_calls": 3041,
+      "optimized_draw_calls": 2872,
+      "baseline_p95_range": [
+        11.268,
+        14.549
+      ],
+      "optimized_p95_range": [
+        10.786,
+        12.975
+      ]
+    },
+    {
+      "scene": "laboratory_nurse",
+      "baseline_p95_median_ms": 8.034,
+      "optimized_p95_median_ms": 6.298,
+      "p95_reduction_percent": 21.61,
+      "baseline_draw_calls": 1723,
+      "optimized_draw_calls": 1267,
+      "baseline_p95_range": [
+        7.007,
+        8.308
+      ],
+      "optimized_p95_range": [
+        6.148,
+        6.777
+      ]
+    },
+    {
+      "scene": "pursuit_nurse",
+      "baseline_p95_median_ms": 8.475,
+      "optimized_p95_median_ms": 6.664,
+      "p95_reduction_percent": 21.37,
+      "baseline_draw_calls": 1750,
+      "optimized_draw_calls": 1343,
+      "baseline_p95_range": [
+        8.389,
+        8.719
+      ],
+      "optimized_p95_range": [
+        6.647,
+        6.746
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "http": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "content_type": "text/html",
+      "encoding": null,
+      "bytes_match": true
+    },
+    {
+      "file": "shell.js",
+      "status": 200,
+      "content_type": "application/javascript",
+      "encoding": null,
+      "bytes_match": true
+    },
+    {
+      "file": "shell.css",
+      "status": 200,
+      "content_type": "text/css",
+      "encoding": null,
+      "bytes_match": true
+    },
+    {
+      "file": "build-config.js",
+      "status": 200,
+      "content_type": "application/javascript",
+      "encoding": null,
+      "bytes_match": true
+    },
+    {
+      "file": "game.js",
+      "status": 200,
+      "content_type": "application/javascript",
+      "encoding": "gzip",
+      "bytes_match": true
+    },
+    {
+      "file": "game.wasm",
+      "status": 200,
+      "content_type": "application/wasm",
+      "encoding": "gzip",
+      "bytes_match": true
+    },
+    {
+      "file": "game.pck",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "encoding": "gzip",
+      "bytes_match": true
+    },
+    {
+      "file": "game.audio.worklet.js",
+      "status": 200,
+      "content_type": "application/javascript",
+      "encoding": null,
+      "bytes_match": true
+    },
+    {
+      "file": "game.audio.position.worklet.js",
+      "status": 200,
+      "content_type": "application/javascript",
+      "encoding": null,
+      "bytes_match": true
+    }
+  ],
+  "build_file_sizes_match": true,
+  "deploy_zip_matches_site": true
+}
