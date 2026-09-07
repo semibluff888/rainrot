@@ -4,7 +4,13 @@
 
 本仓库同时包含桌面版和独立网页版。网页版的构建、启动与部署见 [网页说明](WebVersion/README_网页版.md)；从 Git 克隆后的准备步骤见 [开发说明](DEVELOPMENT.md)。网页导出文件、演示视频及交付 ZIP 由工具生成，不随源码仓库分发。
 
-## 开始游戏
+## 玩家下载
+
+[下载 Windows 桌面版](https://github.com/semibluff888/rainrot/releases/latest)：选择 `RAINROT-Windows-x64.zip`，完整解压后运行 `RAINROT.exe`，无需安装 Godot 或 Python。需要 Windows 10/11 64 位及支持 Vulkan 的显卡。
+
+[直接玩网页版](https://semibluff888.github.io/rainrot/) · [桌面版发布流程](DEVELOPMENT.md#桌面版打包与发布)
+
+## 从源码开始游戏
 
 **双击本目录的 `Launch.cmd`。** 首次进入后选择「进入疗养院」。建议使用耳机。
 

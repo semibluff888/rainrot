@@ -1,0 +1,68 @@
+name: Build and release Windows game
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: windows-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download Godot 4.7.1
+        shell: pwsh
+        run: |
+          $engineZip = Join-Path $env:RUNNER_TEMP 'godot.zip'
+          $engineDir = Join-Path $env:RUNNER_TEMP 'godot'
+          Invoke-WebRequest 'https://github.com/godotengine/godot-builds/releases/download/4.7.1-stable/Godot_v4.7.1-stable_win64.exe.zip' -OutFile $engineZip
+          Expand-Archive -LiteralPath $engineZip -DestinationPath $engineDir
+          "RAINROT_GODOT=$engineDir/Godot_v4.7.1-stable_win64_console.exe" >> $env:GITHUB_ENV
+      - name: Download and verify Windows templates
+        run: python tools/fetch_windows_templates.py
+      - name: Build, test exported executable, and package
+        run: python tools/build_windows.py --godot "$env:RAINROT_GODOT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RAINROT-Windows-x64
+          path: |
+            delivery/RAINROT-Windows-x64.zip
+            delivery/RAINROT-Windows-x64.zip.sha256
+          if-no-files-found: error
+      - name: Preserve build and test logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-build-logs
+          path: .runtime/windows-build/*.log
+          include-hidden-files: true
+
+  publish:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: RAINROT-Windows-x64
+          path: release
+      - name: Publish Windows download
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$RELEASE_TAG" release/RAINROT-Windows-x64.zip release/RAINROT-Windows-x64.zip.sha256 --verify-tag --title "RAINROT $RELEASE_TAG · Windows" --notes-file docs/WINDOWS_RELEASE_NOTES.md

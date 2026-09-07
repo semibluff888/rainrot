@@ -26,3 +26,27 @@ powershell -ExecutionPolicy Bypass -File WebVersion/Build_Web.ps1
 网页版是独立工程。游戏内容更新请修改 `WebVersion/project`；网页外壳修改 `WebVersion/site`。仅修改根目录桌面版不会自动移植到网页版。修改后提交并推送到 `main` 即可，无需提交 `.godot`、WASM、PCK 或 ZIP，也无需本机启动服务器。
 
 首次构建和发布需要等待 Actions 完成；访问后如仍显示旧内容，可以强制刷新。网页版存档属于当前浏览器和网址，首次从 localhost 改为公网地址时，请使用网页上的备份、导入功能转移存档。
+
+## 桌面版打包与发布
+
+桌面版采用根目录的 Godot 工程，Windows x64 导出配置保存在 `export_presets.cfg`，保持 Forward+ 画质。玩家下载入口：https://github.com/semibluff888/rainrot/releases/latest 。
+
+Windows 本地构建（Godot 路径替换为自己的安装路径）：
+
+```powershell
+python tools/fetch_windows_templates.py
+python tools/build_windows.py --godot D:/Godot_v4.7.1-stable_win64.exe/Godot_v4.7.1-stable_win64_console.exe
+```
+
+下载工具只提取固定 Godot 4.7.1 官方模板中的 Windows x64 文件，并核对 `tools/windows-templates.json` 中的 SHA-256。工具链保存在 `.runtime/windows-toolchain`，不提交 Git。`--record` 仅供维护者在确认官方模板来源后更新固定校验值，日常构建不要使用。
+
+构建脚本会导出真正的独立程序，再对这个程序执行 55 项集成检查和怪物检查。测试存档独立保存在 `.runtime/windows-build/userdata`。检查成功后生成 `delivery/RAINROT-Windows-x64.zip` 和 SHA-256 校验文件。玩家包仅包含运行文件、说明与许可证，不含测试存档、录像或工程缓存。
+
+后续正式发布：先更新游戏和 `docs/WINDOWS_RELEASE_NOTES.md`，提交并推送 `main`，再创建新的版本标签，例如：
+
+```powershell
+git tag v0.1.1
+git push origin v0.1.1
+```
+
+`Build and release Windows game` 工作流会在 Windows runner 上重新构建、检查，并把 ZIP 和校验文件发布到该标签的 GitHub Release。每次使用新的版本号，不覆盖旧版标签。仅推送 `main` 不会产生正式桌面版 Release；如需只检查打包，可在 Actions 中手动运行该工作流，下载构建 artifact。
