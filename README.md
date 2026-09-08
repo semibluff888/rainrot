@@ -87,8 +87,9 @@ $godotExe = 'D:\Godot_v4.7.1-stable_win64.exe\Godot_v4.7.1-stable_win64_console.
 & $godotExe --path . -- --benchmark
 & $godotExe --path . --fixed-fps 30 -- --enemy-showcase
 ```
-本项目认可并支持LINUX DO社区：https://linux.do
 
 重新生成场景：`& $godotExe --headless --path . --script res://tools/build_level.gd`。
 
 可选资源准备工具需要 Python、NumPy；`tools/fetch_assets.py` 仅用于重新获取 CC0/OFL 资源，`tools/make_audio.py` 可重建原创声音。已下载资源在正常运行时完全离线使用。
+
+本项目认可并支持LINUX DO社区：https://linux.do
