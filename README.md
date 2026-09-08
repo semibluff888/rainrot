@@ -87,6 +87,7 @@ $godotExe = 'D:\Godot_v4.7.1-stable_win64.exe\Godot_v4.7.1-stable_win64_console.
 & $godotExe --path . -- --benchmark
 & $godotExe --path . --fixed-fps 30 -- --enemy-showcase
 ```
+本项目认可并支持LINUX DO社区：https://linux.do
 
 重新生成场景：`& $godotExe --headless --path . --script res://tools/build_level.gd`。
 
